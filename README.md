@@ -18,3 +18,7 @@ GAS_REPORT=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.ts
 ```
+
+
+TO update...
+Solidity import errors... will need to config vscode environment for where to look
