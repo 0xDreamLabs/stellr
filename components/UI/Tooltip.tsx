@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/themes/light.css';
@@ -11,7 +11,9 @@ For keyboard focus, the element needs a tabindex (which span doesn't have), so w
 When using keyboard, if the child element is already interactive, this results in a tab to show the tooltip, then another to highlight the interactive element
 So if the child is already interactive, we should omitTabIndex so it doesn't double focus for keyboard users
  */
-const Tooltip = ({theme, arrow, content, triggerContent, children, position, disabled, trigger, omitTabIndex, interactive = false, maxWidth, useOnShow, padded, delay}: TooltipInterface) => {
+const Tooltip = ({
+  theme, arrow, content, triggerContent, children, position, disabled, trigger, omitTabIndex, interactive = false, maxWidth, useOnShow, padded, delay,
+}: TooltipInterface) => {
   const spanRef = useRef<any>();
   const [childRef, setChildRef] = useState(null);
   useEffect(() => {
@@ -34,8 +36,8 @@ const Tooltip = ({theme, arrow, content, triggerContent, children, position, dis
       }, 3000);
     },
   };
-  const onShowProp = useOnShow ? {...useOnShowProp} : null;
-  const tabIndex = omitContentTabIndex ? {} : {tabIndex: 0};
+  const onShowProp = useOnShow ? { ...useOnShowProp } : null;
+  const tabIndex = omitContentTabIndex ? {} : { tabIndex: 0 };
   return (
     <>
       <style>{`.tippy-box {border-radius: 2px;} ${padded ? '.tippy-content {padding: 1rem}' : ''}`}</style>

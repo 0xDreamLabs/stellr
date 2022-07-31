@@ -1,10 +1,11 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import FocusLock from 'react-focus-lock';
 import Icon from './Icon';
 import OverlayInterface from '../../interfaces/OverlayInterface';
 
-
-const Overlay = ({duration, children, dismiss, omitPadding, maxWidth, ariaLabel, ariaLabelledBy, omitDismissX, open}: OverlayInterface) => {
+const Overlay = ({
+  duration, children, dismiss, omitPadding, maxWidth, ariaLabel, ariaLabelledBy, omitDismissX, open,
+}: OverlayInterface) => {
   const [readyToDisplay, setReadyToDisplay] = useState(false);
   const [display, setDisplay] = useState(false);
 
@@ -44,8 +45,8 @@ const Overlay = ({duration, children, dismiss, omitPadding, maxWidth, ariaLabel,
   // // if we have aria label by, apply aria labeled by
   // else use the passed in aria label or default aria label
   const ariaLabelProps = {
-    'role': 'dialog',
-    'tabIndex': -1,
+    role: 'dialog',
+    tabIndex: -1,
     'aria-modal': true,
     'aria-labelledby': '',
     'aria-label': '',
@@ -75,7 +76,7 @@ const Overlay = ({duration, children, dismiss, omitPadding, maxWidth, ariaLabel,
             onClick={(e) => {
               e.stopPropagation();
             }}
-            style={{transition: `all ${duration || '0.75s'} ease`}}
+            style={{ transition: `all ${duration || '0.75s'} ease` }}
             className={`w-[60vw] right-0 bg-white dark:bg-primary-dark-500 ${readyToDisplay ? 'right-0' : 'right-[-100%]'} ${
               !omitPadding ? 'py-4 px-8' : ''
             } absolute h-full m-0 overflow-y-auto z-[1001] sm:w-screen min-w-[95vw] md:w-[95vw] md:min-w-[auto] ${maxWidth || ''}`}
@@ -95,5 +96,3 @@ const Overlay = ({duration, children, dismiss, omitPadding, maxWidth, ariaLabel,
   );
 };
 export default Overlay;
-
-

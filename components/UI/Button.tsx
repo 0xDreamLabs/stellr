@@ -2,6 +2,7 @@ import React from 'react';
 import Icon from './Icon';
 import Loading from './Loading';
 import ButtonInterface from '../../interfaces/ButtonInterface';
+
 const Button = ({
   type,
   color,
@@ -27,90 +28,90 @@ const Button = ({
   let btnTextColor = 'text-white';
   switch (color) {
     case 'primary':
-      btnBgColor = `bg-gradient-to-br from-primary-400 via-primary-500 to-secondary-500`;
-      btnBgColorHover = `hover:animate-pulse`;
-      btnTextColor = `text-white`;
+      btnBgColor = 'bg-gradient-to-br from-primary-400 via-primary-500 to-secondary-500';
+      btnBgColorHover = 'hover:animate-pulse';
+      btnTextColor = 'text-white';
       break;
     case 'primary-dark':
-      btnBgColor = `bg-primary-dark-500`;
-      btnBgColorHover = `hover:bg-primary-dark-700`;
-      btnTextColor = `text-white`;
+      btnBgColor = 'bg-primary-dark-500';
+      btnBgColorHover = 'hover:bg-primary-dark-700';
+      btnTextColor = 'text-white';
       break;
     case 'secondary':
-      btnBgColor = `bg-secondary-500`;
-      btnBgColorHover = `hover:bg-secondary-600`;
-      btnTextColor = `text-white`;
+      btnBgColor = 'bg-secondary-500';
+      btnBgColorHover = 'hover:bg-secondary-600';
+      btnTextColor = 'text-white';
       break;
     case 'secondary-dark':
-      btnBgColor = `bg-secondary-dark-500`;
-      btnBgColorHover = `hover:bg-secondary-dark-600`;
-      btnTextColor = `text-white`;
+      btnBgColor = 'bg-secondary-dark-500';
+      btnBgColorHover = 'hover:bg-secondary-dark-600';
+      btnTextColor = 'text-white';
       break;
     case 'primary-gradient':
-      btnBgColor = `bg-rainbow`;
-      btnBgColorHover = `hover:bg-rainbow hover:animate-rainbow`;
-      btnTextColor = `text-white`;
+      btnBgColor = 'bg-rainbow';
+      btnBgColorHover = 'hover:bg-rainbow hover:animate-rainbow';
+      btnTextColor = 'text-white';
       break;
     case 'primary-gradient-outline':
-      btnBgColor = `bg-white dark:bg-primary-dark-500`;
-      btnBgColorHover = `hover:bg-white dark:hover:bg-primary-dark-500`;
-      btnTextColor = `text-transparent bg-clip-text bg-gradient-to-br from-primary-400 via-primary-500 to-secondary-500`;
+      btnBgColor = 'bg-white dark:bg-primary-dark-500';
+      btnBgColorHover = 'hover:bg-white dark:hover:bg-primary-dark-500';
+      btnTextColor = 'text-transparent bg-clip-text bg-gradient-to-br from-primary-400 via-primary-500 to-secondary-500';
       break;
     case 'gray':
-      btnBgColor = `bg-gray-300`;
-      btnBgColorHover = `hover:bg-gray-400`;
-      btnTextColor = `text-black`;
+      btnBgColor = 'bg-gray-300';
+      btnBgColorHover = 'hover:bg-gray-400';
+      btnTextColor = 'text-black';
       break;
     case 'white':
-      btnBgColor = `bg-white`;
-      btnBgColorHover = `hover:bg-gray-200`;
-      btnTextColor = `text-black`;
+      btnBgColor = 'bg-white';
+      btnBgColorHover = 'hover:bg-gray-200';
+      btnTextColor = 'text-black';
       break;
     case 'black':
-      btnBgColor = `bg-black`;
-      btnBgColorHover = `hover:bg-gray-900`;
+      btnBgColor = 'bg-black';
+      btnBgColorHover = 'hover:bg-gray-900';
       break;
     case 'pink':
-      btnBgColor = `bg-pink-500`;
-      btnBgColorHover = `hover:bg-pink-600`;
+      btnBgColor = 'bg-pink-500';
+      btnBgColorHover = 'hover:bg-pink-600';
       break;
     case 'green':
-      btnBgColor = `bg-green-500`;
-      btnBgColorHover = `hover:bg-green-600`;
+      btnBgColor = 'bg-green-500';
+      btnBgColorHover = 'hover:bg-green-600';
       break;
     case 'red':
-      btnBgColor = `bg-red-500`;
-      btnBgColorHover = `hover:bg-red-600`;
+      btnBgColor = 'bg-red-500';
+      btnBgColorHover = 'hover:bg-red-600';
       break;
     case 'yellow':
-      btnBgColor = `bg-yellow-500`;
-      btnBgColorHover = `hover:bg-yellow-600`;
+      btnBgColor = 'bg-yellow-500';
+      btnBgColorHover = 'hover:bg-yellow-600';
       break;
     case 'orange':
-      btnBgColor = `bg-orange-500`;
-      btnBgColorHover = `hover:bg-orange-600`;
+      btnBgColor = 'bg-orange-500';
+      btnBgColorHover = 'hover:bg-orange-600';
       break;
     case 'blue':
-      btnBgColor = `bg-blue-500`;
-      btnBgColorHover = `hover:bg-blue-600`;
+      btnBgColor = 'bg-blue-500';
+      btnBgColorHover = 'hover:bg-blue-600';
       break;
     case 'teal':
-      btnBgColor = `bg-teal-400`;
-      btnBgColorHover = `hover:bg-teal-500`;
+      btnBgColor = 'bg-teal-400';
+      btnBgColorHover = 'hover:bg-teal-500';
       break;
     case 'indigo':
-      btnBgColor = `bg-indigo-500`;
-      btnBgColorHover = `hover:bg-indigo-600`;
+      btnBgColor = 'bg-indigo-500';
+      btnBgColorHover = 'hover:bg-indigo-600';
       break;
     case 'purple':
-      btnBgColor = `bg-purple-500`;
-      btnBgColorHover = `hover:bg-purple-600`;
+      btnBgColor = 'bg-purple-500';
+      btnBgColorHover = 'hover:bg-purple-600';
       break;
     case 'none':
     default:
-      btnBgColor = ``;
-      btnBgColorHover = ``;
-      btnTextColor = ``;
+      btnBgColor = '';
+      btnBgColorHover = '';
+      btnTextColor = '';
   }
 
   switch (size) {
@@ -147,8 +148,8 @@ const Button = ({
       fontSize = 'text-4xl';
       break;
     default:
-      btnSize = ``;
-      fontSize = ``;
+      btnSize = '';
+      fontSize = '';
   }
 
   const handleClick = () => {
@@ -160,14 +161,13 @@ const Button = ({
     }
   };
 
-  const disabledClass = disabled ? `opacity-50 cursor-not-allowed` : '';
+  const disabledClass = disabled ? 'opacity-50 cursor-not-allowed' : '';
   const formattedClassName = className || '';
   const combinedClassNames = `${iconStyle} ${btnSize} ${fontSize} ${btnBgColor} ${
     !disabled && btnBgColorHover
   } ${formattedClassName} ${disabledClass}`;
   const content = text ? <span className={btnTextColor}>{text}</span> : children;
-  const onClickProp =
-    !disabled && !!handleClick ? {onClick: handleClick} : {};
+  const onClickProp = !disabled && !!handleClick ? { onClick: handleClick } : {};
   return (
     <button
       aria-label={ariaLabel || ''}

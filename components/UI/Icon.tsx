@@ -99,21 +99,21 @@ import IconMapInterface from '../../interfaces/IconMapInterface';
 function getSizeClassName(size: string) {
   switch (size) {
     case 'xsmall':
-      return `w-1 h-1`;
+      return 'w-1 h-1';
     case 'small':
-      return `w-2 h-2`;
+      return 'w-2 h-2';
     case 'medium':
-      return `w-4 h-4`;
+      return 'w-4 h-4';
     case 'large':
-      return `w-8 h-8 md:w-6 md:h-6`;
+      return 'w-8 h-8 md:w-6 md:h-6';
     case 'xlarge':
-      return `w-8 h-8`;
+      return 'w-8 h-8';
     case '2xlarge':
-      return `w-12 h-12`;
+      return 'w-12 h-12';
     case '3xlarge':
-      return `w-16 h-16`;
+      return 'w-16 h-16';
     case '4xlarge':
-      return `w-20 h-20`;
+      return 'w-20 h-20';
     default:
       return size;
   }
@@ -122,40 +122,42 @@ function getSizeClassName(size: string) {
 function getColorClassName(color: string) {
   switch (color) {
     case 'primary':
-      return `text-primary-500 dark:text-white`;
+      return 'text-primary-500 dark:text-white';
     case 'secondary':
-      return `text-secondary-500`;
+      return 'text-secondary-500';
     case 'gray':
-      return `text-gray-400`;
+      return 'text-gray-400';
     case 'dark-gray':
-      return `text-gray-700`;
+      return 'text-gray-700';
     case 'white':
-      return `text-white`;
+      return 'text-white';
     case 'black':
-      return `text-black dark:text-white`;
+      return 'text-black dark:text-white';
     case 'pink':
-      return `text-pink-500`;
+      return 'text-pink-500';
     case 'green':
-      return `text-green-500`;
+      return 'text-green-500';
     case 'red':
-      return `text-red-500`;
+      return 'text-red-500';
     case 'yellow':
-      return `text-yellow-300`;
+      return 'text-yellow-300';
     case 'orange':
-      return `text-orange-500`;
+      return 'text-orange-500';
     case 'blue':
-      return `text-blue-500`;
+      return 'text-blue-500';
     case 'teal':
-      return `text-teal-500`;
+      return 'text-teal-500';
     case 'indigo':
-      return `text-indigo-500`;
+      return 'text-indigo-500';
     case 'purple':
-      return `text-purple-500`;
+      return 'text-purple-500';
     default:
       return color;
   }
 }
-const Icon = ({name, color, size, solid, className}: IconInterface) => {
+const Icon = ({
+  name, color, size, solid, className,
+}: IconInterface) => {
   if (!name) {
     return null;
   }
@@ -165,7 +167,7 @@ const Icon = ({name, color, size, solid, className}: IconInterface) => {
   const formattedClassName = `${c} ${s} ${cn}`;
 
   const iconMap: IconMapInterface = {
-    'adjustments': (
+    adjustments: (
       <Adjustments solid={!!solid} formattedClassName={formattedClassName} />
     ),
     'arrow-down': (
@@ -183,19 +185,19 @@ const Icon = ({name, color, size, solid, className}: IconInterface) => {
     'american-express': (
       <AmericanExpress formattedClassName={formattedClassName} />
     ),
-    'beaker': <Beaker solid={!!solid} formattedClassName={formattedClassName} />,
-    'bell': <Bell solid={!!solid} formattedClassName={formattedClassName} />,
+    beaker: <Beaker solid={!!solid} formattedClassName={formattedClassName} />,
+    bell: <Bell solid={!!solid} formattedClassName={formattedClassName} />,
     'book-open': (
       <BookOpen solid={!!solid} formattedClassName={formattedClassName} />
     ),
-    'bullseye': <Bullseye formattedClassName={formattedClassName} />,
-    'calendar': (
+    bullseye: <Bullseye formattedClassName={formattedClassName} />,
+    calendar: (
       <Calendar solid={!!solid} formattedClassName={formattedClassName} />
     ),
     'chart-bar': (
       <ChartBar solid={!!solid} formattedClassName={formattedClassName} />
     ),
-    'check': <Check solid={!!solid} formattedClassName={formattedClassName} />,
+    check: <Check solid={!!solid} formattedClassName={formattedClassName} />,
     'circle-check': (
       <CircleCheck solid={!!solid} formattedClassName={formattedClassName} />
     ),
@@ -238,11 +240,11 @@ const Icon = ({name, color, size, solid, className}: IconInterface) => {
     'clipboard-list': (
       <ClipboardList solid={!!solid} formattedClassName={formattedClassName} />
     ),
-    'clock': <Clock solid={!!solid} formattedClassName={formattedClassName} />,
-    'cloud': <Cloud solid={!!solid} formattedClassName={formattedClassName} />,
-    'code': <Code solid={!!solid} formattedClassName={formattedClassName} />,
-    'cog': <Cog solid={!!solid} formattedClassName={formattedClassName} />,
-    'comment': (
+    clock: <Clock solid={!!solid} formattedClassName={formattedClassName} />,
+    cloud: <Cloud solid={!!solid} formattedClassName={formattedClassName} />,
+    code: <Code solid={!!solid} formattedClassName={formattedClassName} />,
+    cog: <Cog solid={!!solid} formattedClassName={formattedClassName} />,
+    comment: (
       <Comment solid={!!solid} formattedClassName={formattedClassName} />
     ),
     'credit-card': (
@@ -258,8 +260,8 @@ const Icon = ({name, color, size, solid, className}: IconInterface) => {
       />
     ),
     'diners-club': <DinersClub formattedClassName={formattedClassName} />,
-    'discover': <Discover formattedClassName={formattedClassName} />,
-    'document': (
+    discover: <Discover formattedClassName={formattedClassName} />,
+    document: (
       <Document solid={!!solid} formattedClassName={formattedClassName} />
     ),
     'dots-horizontal': (
@@ -268,10 +270,10 @@ const Icon = ({name, color, size, solid, className}: IconInterface) => {
     'dots-vertical': (
       <DotsVertical solid={!!solid} formattedClassName={formattedClassName} />
     ),
-    'download': (
+    download: (
       <Download solid={!!solid} formattedClassName={formattedClassName} />
     ),
-    'elo': <Elo formattedClassName={formattedClassName} />,
+    elo: <Elo formattedClassName={formattedClassName} />,
     'exclamation-circle': (
       <ExclamationCircle
         solid={!!solid}
@@ -281,67 +283,67 @@ const Icon = ({name, color, size, solid, className}: IconInterface) => {
     'external-link': (
       <ExternalLink solid={!!solid} formattedClassName={formattedClassName} />
     ),
-    'eye': <Eye solid={!!solid} formattedClassName={formattedClassName} />,
-    'facebook': <Facebook formattedClassName={formattedClassName} />,
-    'github': <Github formattedClassName={formattedClassName} />,
-    'globe': <Globe solid={!!solid} formattedClassName={formattedClassName} />,
-    'google': <Google formattedClassName={formattedClassName} />,
-    'hipercard': <Hipercard formattedClassName={formattedClassName} />,
-    'home': <Home solid={!!solid} formattedClassName={formattedClassName} />,
+    eye: <Eye solid={!!solid} formattedClassName={formattedClassName} />,
+    facebook: <Facebook formattedClassName={formattedClassName} />,
+    github: <Github formattedClassName={formattedClassName} />,
+    globe: <Globe solid={!!solid} formattedClassName={formattedClassName} />,
+    google: <Google formattedClassName={formattedClassName} />,
+    hipercard: <Hipercard formattedClassName={formattedClassName} />,
+    home: <Home solid={!!solid} formattedClassName={formattedClassName} />,
     'information-circle': (
       <InformationCircle
         solid={!!solid}
         formattedClassName={formattedClassName}
       />
     ),
-    'instagram': <Instagram formattedClassName={formattedClassName} />,
-    'jcb': <JCB formattedClassName={formattedClassName} />,
+    instagram: <Instagram formattedClassName={formattedClassName} />,
+    jcb: <JCB formattedClassName={formattedClassName} />,
     'lightning-bolt': (
       <LightningBolt solid={!!solid} formattedClassName={formattedClassName} />
     ),
-    'link': <Link solid={!!solid} formattedClassName={formattedClassName} />,
-    'linkedin': <LinkedIn formattedClassName={formattedClassName} />,
-    'login': <Login solid={!!solid} formattedClassName={formattedClassName} />,
-    'logout': <Logout solid={!!solid} formattedClassName={formattedClassName} />,
-    'mail': <Mail solid={!!solid} formattedClassName={formattedClassName} />,
-    'maestro': <Maestro formattedClassName={formattedClassName} />,
-    'mastercard': <Mastercard formattedClassName={formattedClassName} />,
-    'menu': <Menu solid={!!solid} formattedClassName={formattedClassName} />,
+    link: <Link solid={!!solid} formattedClassName={formattedClassName} />,
+    linkedin: <LinkedIn formattedClassName={formattedClassName} />,
+    login: <Login solid={!!solid} formattedClassName={formattedClassName} />,
+    logout: <Logout solid={!!solid} formattedClassName={formattedClassName} />,
+    mail: <Mail solid={!!solid} formattedClassName={formattedClassName} />,
+    maestro: <Maestro formattedClassName={formattedClassName} />,
+    mastercard: <Mastercard formattedClassName={formattedClassName} />,
+    menu: <Menu solid={!!solid} formattedClassName={formattedClassName} />,
     'menu-3': <Menu3 solid={!!solid} formattedClassName={formattedClassName} />,
-    'minus': <Minus solid={!!solid} formattedClassName={formattedClassName} />,
-    'moon': <Moon solid={!!solid} formattedClassName={formattedClassName} />,
+    minus: <Minus solid={!!solid} formattedClassName={formattedClassName} />,
+    moon: <Moon solid={!!solid} formattedClassName={formattedClassName} />,
     'paper-airplane': (
       <PaperAirplane solid={!!solid} formattedClassName={formattedClassName} />
     ),
     'pencil-alt': (
       <PencilAlt solid={!!solid} formattedClassName={formattedClassName} />
     ),
-    'play': <Play solid={!!solid} formattedClassName={formattedClassName} />,
-    'plus': <Plus solid={!!solid} formattedClassName={formattedClassName} />,
+    play: <Play solid={!!solid} formattedClassName={formattedClassName} />,
+    plus: <Plus solid={!!solid} formattedClassName={formattedClassName} />,
     'question-mark-circle': (
       <QuestionMarkCircle
         solid={!!solid}
         formattedClassName={formattedClassName}
       />
     ),
-    'refresh': (
+    refresh: (
       <Refresh solid={!!solid} formattedClassName={formattedClassName} />
     ),
-    'rss': <RSS solid={!!solid} formattedClassName={formattedClassName} />,
-    'search': <Search solid={!!solid} formattedClassName={formattedClassName} />,
-    'share': <Share solid={!!solid} formattedClassName={formattedClassName} />,
+    rss: <RSS solid={!!solid} formattedClassName={formattedClassName} />,
+    search: <Search solid={!!solid} formattedClassName={formattedClassName} />,
+    share: <Share solid={!!solid} formattedClassName={formattedClassName} />,
     'shield-check': (
       <ShieldCheck solid={!!solid} formattedClassName={formattedClassName} />
     ),
-    'star': <Star solid={!!solid} formattedClassName={formattedClassName} />,
-    'sun': <Sun solid={!!solid} formattedClassName={formattedClassName} />,
+    star: <Star solid={!!solid} formattedClassName={formattedClassName} />,
+    sun: <Sun solid={!!solid} formattedClassName={formattedClassName} />,
     'thumbs-up': (
       <ThumbsUp solid={!!solid} formattedClassName={formattedClassName} />
     ),
-    'twitch': <Twitch formattedClassName={formattedClassName} />,
-    'twitter': <Twitter formattedClassName={formattedClassName} />,
+    twitch: <Twitch formattedClassName={formattedClassName} />,
+    twitter: <Twitter formattedClassName={formattedClassName} />,
     'union-pay': <UnionPay formattedClassName={formattedClassName} />,
-    'user': <User solid={!!solid} formattedClassName={formattedClassName} />,
+    user: <User solid={!!solid} formattedClassName={formattedClassName} />,
     'user-group': (
       <UserGroup solid={!!solid} formattedClassName={formattedClassName} />
     ),
@@ -354,9 +356,9 @@ const Icon = ({name, color, size, solid, className}: IconInterface) => {
     'view-list': (
       <ViewList solid={!!solid} formattedClassName={formattedClassName} />
     ),
-    'visa': <Visa formattedClassName={formattedClassName} />,
-    'x': <X solid={!!solid} formattedClassName={formattedClassName} />,
-    'youtube': <Youtube formattedClassName={formattedClassName} />,
+    visa: <Visa formattedClassName={formattedClassName} />,
+    x: <X solid={!!solid} formattedClassName={formattedClassName} />,
+    youtube: <Youtube formattedClassName={formattedClassName} />,
     'zoom-in': (
       <ZoomIn solid={!!solid} formattedClassName={formattedClassName} />
     ),

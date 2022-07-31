@@ -5,7 +5,6 @@
 // import AddressInformationButton from './AddressInformationButton';
 // import {useGlobalContext} from '../../providers/GlobalContext';
 
-
 // const AccountButton = () => {
 //   const {connector, isActive} = useWeb3React();
 //   const {account} = useGlobalContext();

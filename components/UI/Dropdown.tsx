@@ -1,4 +1,4 @@
-import React, {useState, useEffect, ReactNode} from 'react';
+import React, { useState, useEffect, ReactNode } from 'react';
 import ButtonInterface from '../../interfaces/ButtonInterface';
 import DropdownInterface from '../../interfaces/DropdownInterface';
 import IconInterface from '../../interfaces/IconInterface';
@@ -6,14 +6,16 @@ import Button from './Button';
 import Icon from './Icon';
 
 type TriggerType = {
-    button:ButtonInterface;
-    icon:IconInterface;
-    trigger:ReactNode;
-    text?:string;
-    openDropDown: boolean;
-    setDropDown: (dropDownState:boolean) => void;
+  button:ButtonInterface;
+  icon:IconInterface;
+  trigger:ReactNode;
+  text?:string;
+  openDropDown: boolean;
+  setDropDown: (dropDownState:boolean) => void;
 };
-const Trigger = ({button, icon, trigger, text, openDropDown, setDropDown}: TriggerType) => {
+const Trigger = ({
+  button, icon, trigger, text, openDropDown, setDropDown,
+}: TriggerType) => {
   if (icon) {
     icon.className = `transition duration-200 transform ${openDropDown && icon.rotate ? 'rotate-180' : ''}`;
   }
@@ -48,7 +50,9 @@ const Trigger = ({button, icon, trigger, text, openDropDown, setDropDown}: Trigg
   );
 };
 
-const Dropdown = ({className, dropClassName, dropBackgroundColor, children, button, icon, text, trigger, id, ariaLabel}: DropdownInterface) => {
+const Dropdown = ({
+  className, dropClassName, dropBackgroundColor, children, button, icon, text, trigger, id, ariaLabel,
+}: DropdownInterface) => {
   const [openDropDown, setDropDown] = useState(false);
   useEffect(() => {
     function clickHandler() {

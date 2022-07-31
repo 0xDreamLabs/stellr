@@ -1,6 +1,5 @@
 // import React from 'react';
 
-
 // import {CoinbaseWallet} from '@web3-react/coinbase-wallet';
 // import {GnosisSafe} from '@web3-react/gnosis-safe';
 // import {Network} from '@web3-react/network';
@@ -108,4 +107,4 @@
 //   );
 // };
 // export default ConnectWalletModal;
-export {}
+export {};

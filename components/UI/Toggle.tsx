@@ -1,7 +1,9 @@
-import React, {useEffect, useState} from 'react';
-import {ToggleInterface} from '../../interfaces/ToggleInterface';
+import React, { useEffect, useState } from 'react';
+import { ToggleInterface } from '../../interfaces/ToggleInterface';
 
-const Toggle = ({option, setOption, options, option1Text, option2Text, toggleColor, toggleBgColor}: ToggleInterface) => {
+const Toggle = ({
+  option, setOption, options, option1Text, option2Text, toggleColor, toggleBgColor,
+}: ToggleInterface) => {
   const [toggle, setToggle] = useState(true);
   useEffect(() => {
     if (toggle) {

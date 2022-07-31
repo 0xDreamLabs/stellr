@@ -4,35 +4,35 @@ import LoadingInterface from '../../interfaces/LoadingInterface';
 function getLoaderColor(color: string | undefined) {
   switch (color) {
     case 'primary':
-      return `loader-primary`;
+      return 'loader-primary';
     case 'primary-dark':
-      return `loader-primary-dark`;
+      return 'loader-primary-dark';
     case 'secondary':
-      return `loader-secondary`;
+      return 'loader-secondary';
     case 'secondary-dark':
-      return `loader-secondary-dark`;
+      return 'loader-secondary-dark';
     case 'white':
-      return `loader-white`;
+      return 'loader-white';
     case 'gray':
-      return `loader-gray`;
+      return 'loader-gray';
     case 'pink':
-      return `loader-pink`;
+      return 'loader-pink';
     case 'green':
-      return `loader-green`;
+      return 'loader-green';
     case 'red':
-      return `loader-red`;
+      return 'loader-red';
     case 'yellow':
-      return `loader-yellow`;
+      return 'loader-yellow';
     case 'purple':
-      return `loader-purple`;
+      return 'loader-purple';
     case 'teal':
-      return `loader-teal`;
+      return 'loader-teal';
     case 'indigo':
-      return `loader-indigo`;
+      return 'loader-indigo';
     case 'blue':
-      return `loader-blue`;
+      return 'loader-blue';
     case 'orange':
-      return `loader-orange`;
+      return 'loader-orange';
     case 'black':
     default:
       return 'loader-black';
@@ -48,7 +48,7 @@ const Loading = ({
   messageClassName,
 }: LoadingInterface) => {
   const c = getLoaderColor(color);
-  const b = isButton ? `border-2 border-t-2` : `border-8 border-t-8`;
+  const b = isButton ? 'border-2 border-t-2' : 'border-8 border-t-8';
   return (
     <div className="flex flex-col justify-center items-center">
       <div

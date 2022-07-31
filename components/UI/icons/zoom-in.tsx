@@ -1,24 +1,22 @@
 import React from 'react';
 
 const svgIcon = (
-    formattedClassName: string,
-    fill: string,
-    stroke: string,
-    viewBox: string,
-    children: React.ReactNode,
-) => {
-  return (
-    <svg
-      className={`${formattedClassName}`}
-      fill={fill}
-      stroke={stroke}
-      viewBox={viewBox}
-      xmlns="https://www.w3.org/2000/svg"
-    >
-      {children}
-    </svg>
-  );
-};
+  formattedClassName: string,
+  fill: string,
+  stroke: string,
+  viewBox: string,
+  children: React.ReactNode,
+) => (
+  <svg
+    className={`${formattedClassName}`}
+    fill={fill}
+    stroke={stroke}
+    viewBox={viewBox}
+    xmlns="https://www.w3.org/2000/svg"
+  >
+    {children}
+  </svg>
+);
 
 const ZoomIn = ({
   solid,

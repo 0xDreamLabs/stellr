@@ -1,7 +1,9 @@
 import React from 'react';
 import DividerInterface from '../../interfaces/DividerInterface';
 
-const Divider = ({horizontal, vertical, children, className}: DividerInterface) => {
+const Divider = ({
+  horizontal, vertical, children, className,
+}: DividerInterface) => {
   if (horizontal) {
     if (children) {
       return (

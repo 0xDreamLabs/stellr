@@ -20,17 +20,15 @@ const getToastBodyStyles = (toastType: ToastInterface['toastType']) => {
   return bodyStyles;
 };
 
-const Toast = ({toastType, toastHeader, toastMessage}: ToastInterface) => {
+const Toast = ({ toastType, toastHeader, toastMessage }: ToastInterface) => {
   if (!toastType && !toastMessage) return null;
 
   const toastBodyStyles = getToastBodyStyles(toastType);
   return (
-    <>
-      <div id="toast-success" className={`${toastBodyStyles}`} role="alert">
-        <div className='ml-3 text-lg font-semibold'>{toastHeader}</div>
-        <div className="ml-3 text-sm font-normal">{toastMessage}</div>
-      </div>
-    </>
+    <div id="toast-success" className={`${toastBodyStyles}`} role="alert">
+      <div className="ml-3 text-lg font-semibold">{toastHeader}</div>
+      <div className="ml-3 text-sm font-normal">{toastMessage}</div>
+    </div>
 
   );
 };

@@ -3,7 +3,9 @@ import Image from 'next/image';
 
 import ImageInterface from '../../interfaces/ImageInterface';
 
-const ImageComponent = ({src, alt, className, onClick, circle, size, ariaLabel, omitMarginAuto, marginBottom, setIsImgLoading}: ImageInterface) => {
+const ImageComponent = ({
+  src, alt, className, onClick, circle, size, ariaLabel, omitMarginAuto, marginBottom, setIsImgLoading,
+}: ImageInterface) => {
   let defaultStyles = '';
 
   defaultStyles = circle ? 'rounded-full border-primary-500 border-2 p-1 ' : '';
@@ -31,9 +33,7 @@ const ImageComponent = ({src, alt, className, onClick, circle, size, ariaLabel, 
       <Image src={src} className={`inline-block ${defaultStyles} mb-3 ${className}`} alt={alt} />
     </button>
   ) : (
-    <>
-      <Image src={src} className={`inline-block ${defaultStyles} ${marginBottom || 'mb-3'} ${className}`} alt={alt} onLoad={() => handleImgLoaded()} />
-    </>
+    <Image src={src} className={`inline-block ${defaultStyles} ${marginBottom || 'mb-3'} ${className}`} alt={alt} onLoad={() => handleImgLoaded()} />
   );
 };
 
