@@ -1,6 +1,6 @@
 // @TODO remove this
 /* eslint-disable max-len */
-// import React from 'react';
+import React from 'react';
 
 // import {CoinbaseWallet} from '@web3-react/coinbase-wallet';
 // import {GnosisSafe} from '@web3-react/gnosis-safe';
@@ -109,4 +109,7 @@
 //   );
 // };
 // export default ConnectWalletModal;
-export {};
+const ConnectWalletModal = () => (
+  <h2>Connect Wallet Modal</h2>
+);
+export default ConnectWalletModal;

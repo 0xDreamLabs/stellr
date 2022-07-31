@@ -1,6 +1,6 @@
 // @TODO remove this
 /* eslint-disable max-len */
-// import React from 'react';
+import React from 'react';
 // const Logo = ({formattedClassName, gradient, gradientId}: {formattedClassName?: string, gradient?:boolean, gradientId?:string}) => {
 //   return (
 //     <svg className={formattedClassName || 'w-8 h-8'} xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-29.1 -21.4 1338.1 986.9" fill={gradient ? `url(#${gradientId || 'id-1'})` : 'currentColor'}
@@ -27,4 +27,8 @@
 //   );
 // };
 // export default Logo;
-export {};
+
+const Logo = () => (
+  <h2>Hello</h2>
+);
+export default Logo;
