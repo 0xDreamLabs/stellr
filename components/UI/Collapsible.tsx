@@ -1,35 +1,38 @@
 import React from 'react';
 import ReactCollapsible from 'react-collapsible';
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import CollapsibleInterface from '../../interfaces/CollapsibleInterface';
 
 const Collapsible = (props: CollapsibleInterface) => {
-  const collapsibleId = props.collapsibleId || uuidv4();
+  const {
+    collapsibleId, ariaLabel, trigger, transitionTime, open, children,
+  } = props;
+  const id = collapsibleId || uuidv4();
   let ariaProps = {};
-  if (props.ariaLabel) {
+  if (ariaLabel) {
     ariaProps = {
-      'aria-label': props.ariaLabel,
+      'aria-label': ariaLabel,
     };
   } else {
     ariaProps = {
-      'aria-labelledby': `${collapsibleId}-collapsible`,
+      'aria-labelledby': `${id}-collapsible`,
     };
   }
   return (
     <ReactCollapsible
       {...props}
-      transitionTime={props.transitionTime || 200}
+      transitionTime={transitionTime || 200}
       trigger={
-        props.trigger ? (
-            <button aria-expanded={props.open} aria-controls={collapsibleId} id={`${collapsibleId}-collapsible`} className="w-full text-left">
-              {props.trigger}
-            </button>
+        trigger ? (
+          <button type="button" aria-expanded={open} aria-controls={id} id={`${id}-collapsible`} className="w-full text-left">
+            {trigger}
+          </button>
         ) : ''
       }
     >
-      {(props.open || props.open === undefined) && (
+      {(open || open === undefined) && (
         <div role="region" id={collapsibleId} {...ariaProps}>
-          {props.children}
+          {children}
         </div>
       )}
     </ReactCollapsible>
