@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 import Button from '../../UI/Button';
 import Icon from '../../UI/Icon';
@@ -53,12 +53,14 @@ const MobileNav = () => {
     <>
       <div id="mobile-nav-header" className="flex justify-between px-8 py-2 md:hidden">
         <DarkModeToggle />
-        <Link href="/">
-          {/* <Logo formattedClassName='w-12 h-12' gradient gradientId='mobile-logo' /> */}
-          <h2>Logo was here</h2>
-        </Link>
+        {/* <Link href="/">
+          <h2 className="font-semibold text-xl text-transparent
+          bg-clip-text bg-gradient-to-br from-primary-400 via-primary-500
+           to-secondary-500">Stellr</h2>
+        </Link> */}
         <Button
           type="button"
+          className="hidden"
           ariaLabel="Open Mobile Side Menu"
           onClick={() => setIsOverlayOpen(true)}
           color="none"
