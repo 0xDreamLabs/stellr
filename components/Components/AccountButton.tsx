@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 // import React from 'react';
 // import {useWeb3React} from '@web3-react/core';
 
@@ -10,7 +11,7 @@
 //   const {account} = useGlobalContext();
 //   return (
 //     <>
-//       {isActive ? <AddressInformationButton address={account || ''} connector={connector} /> : <ConnectWalletButton />}
+// {isActive ? <AddressInformationButton address={account || ''} connector={connector} /> : <ConnectWalletButton />}
 //     </>
 //   );
 // };

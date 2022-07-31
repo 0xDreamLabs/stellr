@@ -14,6 +14,7 @@ const getToastBodyStyles = (toastType: ToastInterface['toastType']) => {
       bodyStyles += 'border-green-600 bg-green-100 text-green-600';
       break;
     case 'info':
+    default:
       bodyStyles += 'border-blue-600 bg-blue-200 text-blue-600';
       break;
   }

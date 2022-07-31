@@ -4,7 +4,16 @@ import Image from 'next/image';
 import ImageInterface from '../../interfaces/ImageInterface';
 
 const ImageComponent = ({
-  src, alt, className, onClick, circle, size, ariaLabel, omitMarginAuto, marginBottom, setIsImgLoading,
+  src,
+  alt,
+  className,
+  onClick,
+  circle,
+  size,
+  ariaLabel,
+  omitMarginAuto,
+  marginBottom,
+  setIsImgLoading,
 }: ImageInterface) => {
   let defaultStyles = '';
 
@@ -22,14 +31,14 @@ const ImageComponent = ({
   const handleImgLoaded = () => {
     if (setIsImgLoading) {
       setIsImgLoading(false);
-    } else {
-      return null;
     }
   };
 
-  // if we have onClick, wrap image in button and provide aria-label (accessibility), else return just the image
+  /*
+    if we have onClick, wrap image in button and provide aria-label (accessibility),
+    else return just the image */
   return onClick ? (
-    <button onClick={onClick} aria-label={ariaLabel || ''}>
+    <button type="button" onClick={onClick} aria-label={ariaLabel || ''}>
       <Image src={src} className={`inline-block ${defaultStyles} mb-3 ${className}`} alt={alt} />
     </button>
   ) : (

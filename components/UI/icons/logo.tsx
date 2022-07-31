@@ -1,3 +1,5 @@
+// @TODO remove this
+/* eslint-disable max-len */
 // import React from 'react';
 // const Logo = ({formattedClassName, gradient, gradientId}: {formattedClassName?: string, gradient?:boolean, gradientId?:string}) => {
 //   return (

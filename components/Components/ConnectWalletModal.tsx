@@ -1,3 +1,5 @@
+// @TODO remove this
+/* eslint-disable max-len */
 // import React from 'react';
 
 // import {CoinbaseWallet} from '@web3-react/coinbase-wallet';

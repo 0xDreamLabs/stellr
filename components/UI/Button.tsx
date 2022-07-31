@@ -20,7 +20,6 @@ const Button = ({
   ariaLabel,
 }: ButtonInterface) => {
   const iconStyle = icon ? 'flex' : '';
-  const btnType = type === 'submit' ? 'submit' : 'button';
   let btnSize;
   let fontSize;
   let btnBgColor;
@@ -171,7 +170,7 @@ const Button = ({
   return (
     <button
       aria-label={ariaLabel || ''}
-      type={btnType}
+      type={type === 'submit' ? 'submit' : 'button'}
       className={`${combinedClassNames} bg-center items-center cursor-pointer shadow-xs rounded`}
       {...onClickProp}
     >

@@ -11,7 +11,12 @@ import DarkModeToggle from '../../Components/DarkModeToggle';
 import nav from './nav.enum';
 import AddressInformationButton from '../../Components/AddressInformationButton';
 
-const MobileMenuOptions = ({ isOverlayOpen, setIsOverlayOpen }:{ isOverlayOpen: boolean, setIsOverlayOpen: (state: boolean) => void }) => {
+const MobileMenuOptions = ({
+  isOverlayOpen,
+  setIsOverlayOpen,
+}:{
+  isOverlayOpen: boolean,
+  setIsOverlayOpen: (state: boolean) => void }) => {
   const { mobile } = nav;
 
   return (
@@ -62,7 +67,8 @@ const MobileNav = () => {
           }}
         />
       </div>
-      {/* The Mobile Menu Options is outside of the nav header b/c with justify-between and flex... it would move the button over */}
+      {/* The Mobile Menu Options is outside of the nav header b/c with justify-between and flex...
+      it would move the button over */}
       <MobileMenuOptions isOverlayOpen={isOverlayOpen} setIsOverlayOpen={setIsOverlayOpen} />
     </>
   );

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState, useEffect, useRef } from 'react';
 import FocusLock from 'react-focus-lock';
 import Icon from './Icon';
@@ -16,7 +18,9 @@ const Overlay = ({
         display - dictates whether the component returns null or displays it in a closed state...
         readyToDisplay - controls transitions in and out
 
-        setTimeout is used bc it allows for the element to get placed in DOM and the ref to get set in order for the transition animations to work. The timeouts manage the actual display/return of the component
+        setTimeout is used bc it allows for the element to get placed in DOM and the ref to get
+        set in order for the transition animations to work. The timeouts manage the actual
+         display/return of the component
         vs the class toggle animation
     */
     if (!open && display) {
@@ -83,7 +87,7 @@ const Overlay = ({
           >
             {!omitDismissX && (
               <div className="text-right p-4">
-                <button aria-label="Dismiss Dialog" onClick={() => dismiss()}>
+                <button type="button" aria-label="Dismiss Dialog" onClick={() => dismiss()}>
                   <Icon name="x" size="medium" className="cursor-pointer inline-block" color="gray" />
                 </button>
               </div>

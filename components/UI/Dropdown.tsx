@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useEffect, ReactNode } from 'react';
 import ButtonInterface from '../../interfaces/ButtonInterface';
 import DropdownInterface from '../../interfaces/DropdownInterface';
@@ -17,6 +20,7 @@ const Trigger = ({
   button, icon, trigger, text, openDropDown, setDropDown,
 }: TriggerType) => {
   if (icon) {
+    // eslint-disable-next-line no-param-reassign
     icon.className = `transition duration-200 transform ${openDropDown && icon.rotate ? 'rotate-180' : ''}`;
   }
   if (button) {
@@ -51,7 +55,16 @@ const Trigger = ({
 };
 
 const Dropdown = ({
-  className, dropClassName, dropBackgroundColor, children, button, icon, text, trigger, id, ariaLabel,
+  className,
+  dropClassName,
+  dropBackgroundColor,
+  children,
+  button,
+  icon,
+  text,
+  trigger,
+  id,
+  ariaLabel,
 }: DropdownInterface) => {
   const [openDropDown, setDropDown] = useState(false);
   useEffect(() => {
@@ -74,7 +87,14 @@ const Dropdown = ({
   const height = openDropDown ? 'h-auto' : '0';
   return (
     <div id={id} className={`relative inline-block top-0 ${dropBackgroundColor || 'bg-transparent'} border-none ${className || ''}`} aria-label={ariaLabel}>
-      <Trigger button={button} icon={icon} trigger={trigger} text={text} openDropDown={openDropDown} setDropDown={setDropDown} />
+      <Trigger
+        button={button}
+        icon={icon}
+        trigger={trigger}
+        text={text}
+        openDropDown={openDropDown}
+        setDropDown={setDropDown}
+      />
       <div className={`z-30 transition duration-200 overflow-hidden absolute right-0 shadow-xs ${visibility} ${opacity} ${height} ${display} ${dropClassName || ''}`}>
         {children}
       </div>

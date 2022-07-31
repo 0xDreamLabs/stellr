@@ -30,26 +30,21 @@ const Faq = ({ question, answer, id }: { question:string, answer: string, id:num
   );
 };
 
-const Faqs = ({ faqs, className }: { faqs: {
+const Faqs = ({ faqs, className = '' }: { faqs: {
   id: number;
   question: string;
   answer: string;
-}[], className?: string }) => {
-  if (!faqs || !faqs.length) {
-    return null;
-  }
-  return (
-    <div className={className || ''}>
-      <h2 className="text-2xl font-black mb-6">Frequently Asked Questions</h2>
-      {faqs.map((faq) => {
-        const { question, answer, id } = faq;
-        return (
-          <div className="my-4" key={id}>
-            <Faq question={question} answer={answer} id={id} />
-          </div>
-        );
-      })}
-    </div>
-  );
-};
+}[], className?: string }) => (
+  <div className={className}>
+    <h2 className="text-2xl font-black mb-6">Frequently Asked Questions</h2>
+    {faqs.map((faq) => {
+      const { question, answer, id } = faq;
+      return (
+        <div className="my-4" key={id}>
+          <Faq question={question} answer={answer} id={id} />
+        </div>
+      );
+    })}
+  </div>
+);
 export default Faqs;

@@ -1,15 +1,24 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import FocusLock from 'react-focus-lock';
 import ModalInterface from '../../interfaces/ModalInterface';
 
-function CloseX({ toggle, omitCloseX, color }: { toggle: ()=> void, omitCloseX:boolean | undefined, color: string | undefined }) {
+function CloseX({
+  toggle,
+  omitCloseX,
+  color,
+}:
+{ toggle: ()=> void,
+  omitCloseX:boolean | undefined,
+  color: string | undefined }) {
   if (omitCloseX) {
     return null;
   }
   return (
-    <button aria-label="Close" className={`text-3xl cursor-pointer ${color || ''}`} onClick={toggle}>
+    <button type="button" aria-label="Close" className={`text-3xl cursor-pointer ${color || ''}`} onClick={toggle}>
       &times;
     </button>
   );
@@ -104,9 +113,12 @@ const Modal = ({
       setFocusLocked(false);
     };
   }, [open]);
-  // Set focus on modal when focuslocked
-  // There's a prop to go on modal, 'autofocus' that will auto focus on a table element inside, but this defaults to the close button when active
-  // 'autofocus' also doesn't seem to work when delayed from focusLockDelay
+  /*
+    Set focus on modal when focuslocked
+    There's a prop to go on modal, 'autofocus' that will auto focus on a
+    table element inside, but this defaults to the close button when active
+    'autofocus' also doesn't seem to work when delayed from focusLockDelay
+  */
   useEffect(() => {
     manageFocus(focusLocked);
   }, [focusLocked]);
@@ -135,7 +147,8 @@ const Modal = ({
     <>
       {trigger}
       {open && (
-        // if autoFocus is set to true will set focus on first focusable element in module - Focus being handled above when focusLocked is true
+        /* if autoFocus is set to true will set focus on first focusable element in module -
+        Focus being handled above when focusLocked is true */
         createPortal(
           <FocusLock autoFocus={false} disabled={!focusLocked} returnFocus>
             <div
@@ -178,4 +191,3 @@ const Modal = ({
   );
 };
 export default Modal;
-//  Argument of type '(e: KeyboardEvent<Element>) => void' is not assignable to parameter of type '(this: Window, ev: KeyboardEvent) => any'.\n      Types of parameters 'e' and 'ev' are incompatible.\n        Type 'KeyboardEvent' is missing the following properties from type 'KeyboardEvent<Element>': locale, nativeEvent, isDefaultPrevented, isPropagationStopped, persist\n  Overload 2 of 2, '(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions | undefined): void', gave the following error.\n    Argument of type '(e: KeyboardEvent<Element>) => void' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.\n      Type '(e: KeyboardEvent<Element>) => void' is not assignable to type 'EventListener'.\n        Types of parameters 'e' and 'evt' are incompatible.\n          Type 'Event' is missing the following properties from type 'KeyboardEvent<Element>': altKey, charCode, ctrlKey, code, and 15 more.",

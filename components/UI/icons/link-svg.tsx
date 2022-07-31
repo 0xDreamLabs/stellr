@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Link = ({
+const LinkSVG = ({
   solid,
   formattedClassName,
 }: {
@@ -42,4 +42,4 @@ const Link = ({
   );
 };
 
-export default Link;
+export default LinkSVG;

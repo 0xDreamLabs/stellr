@@ -1,3 +1,7 @@
+// @TODO remove these when ready
+/* eslint-disable react/require-default-props */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable max-len */
 import React from 'react';
 import Button from '../UI/Button';
 import { formatWalletAddress } from '../../utils/formatUtil';

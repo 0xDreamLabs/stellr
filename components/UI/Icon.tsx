@@ -40,7 +40,7 @@ import Globe from './icons/globe';
 import Home from './icons/home';
 import InformationCircle from './icons/information-circle';
 import LightningBolt from './icons/lightning-bolt';
-import Link from './icons/link';
+import LinkSVG from './icons/link-svg';
 import Login from './icons/login';
 import Logout from './icons/logout';
 import Mail from './icons/mail';
@@ -301,7 +301,7 @@ const Icon = ({
     'lightning-bolt': (
       <LightningBolt solid={!!solid} formattedClassName={formattedClassName} />
     ),
-    link: <Link solid={!!solid} formattedClassName={formattedClassName} />,
+    link: <LinkSVG solid={!!solid} formattedClassName={formattedClassName} />,
     linkedin: <LinkedIn formattedClassName={formattedClassName} />,
     login: <Login solid={!!solid} formattedClassName={formattedClassName} />,
     logout: <Logout solid={!!solid} formattedClassName={formattedClassName} />,
