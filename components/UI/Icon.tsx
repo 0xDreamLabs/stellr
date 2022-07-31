@@ -160,7 +160,6 @@ const Icon = ({name, color, size, solid, className}: IconInterface) => {
     return null;
   }
   const c = getColorClassName(color);
-  console.log('c', c);
   const s = getSizeClassName(size) || '';
   const cn = className || '';
   const formattedClassName = `${c} ${s} ${cn}`;
