@@ -1,4 +1,5 @@
 import { ethers } from "hardhat";
+import "@nomiclabs/hardhat-waffle";
 
 async function main() {
   const currentTimestampInSeconds = Math.round(Date.now() / 1000);
