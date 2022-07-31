@@ -7,7 +7,6 @@ const Sun = ({
   solid: boolean,
   formattedClassName: string,
 }) => {
-  console.log('formattedClassname', formattedClassName);
   if (solid) {
     return (
       <svg className={formattedClassName} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
