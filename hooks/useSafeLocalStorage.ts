@@ -1,6 +1,6 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
-const useSafeLocalStorage = (key:any, initialValue:any) => {
+export const useSafeLocalStorage = (key:any, initialValue:any) => {
   const [valueProxy, setValueProxy] = useState(() => {
     try {
       const value = window.localStorage.getItem(key);
@@ -21,4 +21,3 @@ const useSafeLocalStorage = (key:any, initialValue:any) => {
 
   return [valueProxy, setValue];
 };
-export default useSafeLocalStorage;

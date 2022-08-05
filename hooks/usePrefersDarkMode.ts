@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 
 const getInitialTheme = () => {
   if (typeof window !== 'undefined' && window.localStorage) {
@@ -19,7 +19,8 @@ const getInitialTheme = () => {
   // return true instead
   return false;
 };
-const usePrefersDarkMode = () => {
+
+export const usePrefersDarkMode = () => {
   // we set initial value to initial theme to prevent unwanted flashing of white or dark theme if we used true or false
   const [value, setValue] = useState<boolean>(getInitialTheme);
   useEffect(() => {
@@ -33,4 +34,3 @@ const usePrefersDarkMode = () => {
 
   return value;
 };
-export default usePrefersDarkMode;

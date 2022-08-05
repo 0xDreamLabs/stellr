@@ -1,8 +1,7 @@
-import {useEffect} from 'react';
-import usePrefersDarkMode from './usePrefersDarkMode';
-import useSafeLocalStorage from './useSafeLocalStorage';
+import { useEffect } from 'react';
+import { usePrefersDarkMode, useSafeLocalStorage } from '.';
 
-const useDarkMode = () => {
+export const useDarkMode = () => {
   const prefersDarkMode = usePrefersDarkMode();
   const [isEnabled, setIsEnabled] = useSafeLocalStorage('dark-mode', undefined);
 
@@ -17,4 +16,3 @@ const useDarkMode = () => {
 
   return [enabled, setIsEnabled];
 };
-export default useDarkMode;

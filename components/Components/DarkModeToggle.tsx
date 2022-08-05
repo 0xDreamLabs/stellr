@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import useDarkMode from '../../hooks/useDarkMode';
+import { useDarkMode } from '../../hooks';
 
 import Button from '../UI/Button';
 
