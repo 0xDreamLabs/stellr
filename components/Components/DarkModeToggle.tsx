@@ -17,7 +17,7 @@ const DarkModeToggle = () => {
 
   return (
     <Button
-      type="bustton"
+      type="button"
       ariaLabel={ariaLabel}
       color="none"
       icon={{
