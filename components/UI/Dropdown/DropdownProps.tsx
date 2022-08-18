@@ -1,8 +1,8 @@
 import React, {ReactNode} from 'react';
-import { ButtonProps } from '../Button';
-import { IconProps } from '../Icon';
+import { ButtonProps } from '../Button/ButtonProps';
+import { IconProps } from '../Icon/IconProps';
 
-export type DropdownProps {
+export type DropdownProps = {
     // will return null without id
     id: string;
 

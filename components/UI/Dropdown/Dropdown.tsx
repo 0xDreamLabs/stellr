@@ -2,7 +2,10 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useEffect, ReactNode } from 'react';
-import { Button, ButtonProps, DropdownProps, Icon, IconProps } from '../'
+import { Button, Icon } from '../'
+import { ButtonProps } from '../Button/ButtonProps';
+import { IconProps } from '../Icon/IconProps';
+import { DropdownProps } from '../Dropdown/DropdownProps';
 
 type TriggerType = {
   button:ButtonProps;

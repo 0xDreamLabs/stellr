@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import FocusLock from 'react-focus-lock';
-import ModalProps from './ModalProps';
+import { ModalProps } from './ModalProps';
 
 function CloseX({
   toggle,

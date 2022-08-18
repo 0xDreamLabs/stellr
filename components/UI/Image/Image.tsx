@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import ImageProps from './ImageProps';
+import { ImageProps } from './ImageProps';
 
 export const ImageComponent = ({
   src,

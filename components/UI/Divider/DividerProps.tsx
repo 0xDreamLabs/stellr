@@ -1,5 +1,5 @@
 import React, {ReactNode} from 'react';
-export type DividerProps {
+export type DividerProps = {
     horizontal?: boolean;
     vertical?: boolean;
     children?: ReactNode;

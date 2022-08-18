@@ -1,5 +1,5 @@
 import React from 'react';
-import ToastProps from './ToastProps';
+import { ToastProps } from './ToastProps';
 
 const getToastBodyStyles = (toastType: ToastProps['toastType']) => {
   let bodyStyles = 'items-center p-4 mb-4 w-full max-w-xs bg-white rounded-lg shadow border-2 ';

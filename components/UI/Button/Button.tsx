@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '../Icon';
-import Loading from '../Loading/Loading';
+import { Loading } from '../Loading';
 import { ButtonProps } from './ButtonProps';
 
 export const Button = ({

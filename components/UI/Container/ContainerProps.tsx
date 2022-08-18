@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-export type ContainerProps {
+export type ContainerProps = {
     margin?: string;
     padding?: string;
     className?: string;

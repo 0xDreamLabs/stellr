@@ -1,6 +1,6 @@
 import {ToastTypeOptions} from '../../../interfaces/types';
 
-export default interface ToastProps {
+export type ToastProps = {
     toastType: ToastTypeOptions,
     toastHeader: string,
     toastMessage: string | JSX.Element;

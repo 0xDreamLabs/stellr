@@ -10,7 +10,7 @@ type PositionOptions =  'top' | 'top-start' | 'top-end' | 'right' | 'right-start
  'auto' |  
  'auto-start' |  
  'auto-end';
-export default interface TooltipProps {
+export type TooltipProps = {
     theme?: 'dark' | 'light' | 'transparent';
     arrow?: boolean;
     content: string;

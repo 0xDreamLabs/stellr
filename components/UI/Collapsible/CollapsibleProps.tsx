@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-export type CollapsibleProps {
+export type CollapsibleProps = {
     ariaLabel: string;
     collapsibleId: string;
     transitionTime?: number;

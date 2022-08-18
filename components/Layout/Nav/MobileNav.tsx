@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-import { Button, Overlay } from '../../UI';
-import Icon from '../../UI/Icon/Icon';
+import { Button, Overlay, Icon } from '../../UI';
 // import Logo from '../../UI/icons/logo';
 
 import DarkModeToggle from '../../Components/DarkModeToggle';

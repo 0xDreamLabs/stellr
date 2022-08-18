@@ -1,5 +1,5 @@
 import React, {ReactNode} from 'react';
-export default interface ModalProps {
+export type ModalProps = {
     open: boolean;
     trigger?: ReactNode;
     toggle: any;

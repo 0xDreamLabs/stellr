@@ -1,5 +1,5 @@
 import React from 'react';
-import LoadingProps from './LoadingProps';
+import { LoadingProps } from './LoadingProps';
 
 function getLoaderColor(color: string | undefined) {
   switch (color) {

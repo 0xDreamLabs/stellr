@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { ColorOptions } from '../../../interfaces/types';
-export default interface LoadingProps {
+export type LoadingProps = {
     color?: ColorOptions;
     message?: string;
     children?: ReactNode;

@@ -4,7 +4,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/themes/light.css';
-import TooltipInterface from './TooltipProps';
+import { TooltipProps } from './TooltipProps';
 /**
 Tippy needs the ref of the children it is attaching to. An easy way around that is to
 just wrap the children in an element (span)
@@ -34,7 +34,7 @@ export const Tooltip = ({
   useOnShow,
   padded,
   delay,
-}: TooltipInterface) => {
+}: TooltipProps) => {
   const spanRef = useRef<any>();
   const [childRef, setChildRef] = useState(null);
   useEffect(() => {

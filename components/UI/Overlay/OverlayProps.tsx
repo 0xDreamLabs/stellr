@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react';
 
-export default interface OverlayProps {
+export type OverlayProps = {
     children: ReactNode;
     dismiss: () => void;
     open: boolean;

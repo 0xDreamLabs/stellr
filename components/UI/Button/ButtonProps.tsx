@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { IconProps } from "../Icon";
+import { IconProps } from "../Icon/IconProps";
 import { ColorOptions, SizeOptions } from "../../../interfaces/types";
 
 export type ButtonProps = {

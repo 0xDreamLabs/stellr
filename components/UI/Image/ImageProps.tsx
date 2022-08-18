@@ -1,6 +1,6 @@
 import React from "react";
 
-export default interface ImageProps {
+export type ImageProps = {
     src: string;
     // if image is decorative leave alt blank... it is best practice for accessibility
     alt?: string;
@@ -11,7 +11,7 @@ export default interface ImageProps {
     size?:string;
     // if image is clickable, provide aria-label
     ariaLabel?: string;
-    omitMarginAuto?: boolean; 
-    marginBottom?: string; 
+    omitMarginAuto?: boolean;
+    marginBottom?: string;
     setIsImgLoading?: (arg0: boolean) => void
 }

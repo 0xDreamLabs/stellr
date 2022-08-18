@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import FocusLock from 'react-focus-lock';
 import Icon from '../Icon/Icon';
-import OverlayProps from './OverlayProps';
+import { OverlayProps } from './OverlayProps';
 
 export const Overlay = ({
   duration, children, dismiss, omitPadding, maxWidth, ariaLabel, ariaLabelledBy, omitDismissX, open,
