@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable max-len */
 import React from 'react';
-import Button from '../UI/Button';
+import Button from '../UI/Button/Button';
 import { formatWalletAddress } from '../../utils/formatUtil';
 // import useCachedConnector from '../../hooks/useCachedConnector';
 
