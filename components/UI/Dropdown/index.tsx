@@ -1,5 +1,5 @@
 import Dropdown from './Dropdown';
 
-export * from './Dropdown';
+export { Dropdown } from './Dropdown';
 
 export default Dropdown;

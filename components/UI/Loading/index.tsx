@@ -1,5 +1,5 @@
 import Loading from './Loading';
 
-export * from './Loading';
+export { Loading } from './Loading';
 
 export default Loading;

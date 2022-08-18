@@ -1,6 +1,6 @@
 import React from "react";
 
-export default interface ImageInterface {
+export default interface ImageProps {
     src: string;
     // if image is decorative leave alt blank... it is best practice for accessibility
     alt?: string;

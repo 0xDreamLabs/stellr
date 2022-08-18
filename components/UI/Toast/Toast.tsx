@@ -1,7 +1,7 @@
 import React from 'react';
-import ToastInterface from './ToastInterface';
+import ToastProps from './ToastProps';
 
-const getToastBodyStyles = (toastType: ToastInterface['toastType']) => {
+const getToastBodyStyles = (toastType: ToastProps['toastType']) => {
   let bodyStyles = 'items-center p-4 mb-4 w-full max-w-xs bg-white rounded-lg shadow border-2 ';
   switch (toastType) {
     case 'warning':
@@ -21,7 +21,7 @@ const getToastBodyStyles = (toastType: ToastInterface['toastType']) => {
   return bodyStyles;
 };
 
-const Toast = ({ toastType, toastHeader, toastMessage }: ToastInterface) => {
+export const Toast = ({ toastType, toastHeader, toastMessage }: ToastProps) => {
   if (!toastType && !toastMessage) return null;
 
   const toastBodyStyles = getToastBodyStyles(toastType);

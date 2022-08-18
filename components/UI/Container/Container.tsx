@@ -1,7 +1,7 @@
 import React from 'react';
 import { ContainerProps } from './ContainerProps';
 
-const Container = ({
+export const Container = ({
   margin, padding, className, children,
 }: ContainerProps) => {
   let p = '';

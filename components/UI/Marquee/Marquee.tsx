@@ -1,7 +1,7 @@
 import React from 'react';
 import { v4 as uuid } from 'uuid';
 // we only accept rightToLeft as direction b/c by default we will go left to right.
-const Marquee = ({ reverse, marqueeText }:{ reverse?: boolean, marqueeText: string }) => {
+export const Marquee = ({ reverse, marqueeText }:{ reverse?: boolean, marqueeText: string }) => {
   let animationClass = 'motion-safe:animate-marquee';
   if (reverse) {
     animationClass = 'motion-safe:animate-marquee-reverse';

@@ -155,7 +155,7 @@ function getColorClassName(color: string) {
   }
 }
 
-const Icon = ({
+export const Icon = ({
   name, color, size, solid, className,
 }: IconProps) => {
   if (!name) {
@@ -368,4 +368,5 @@ const Icon = ({
   };
   return iconMap[name] || null;
 };
+
 export default Icon;

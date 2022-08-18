@@ -1,5 +1,5 @@
 import Collapsible from './Collapsible';
 
-export * from './Collapsible';
+export { Collapsible } from './Collapsible';
 
 export default Collapsible;

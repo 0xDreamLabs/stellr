@@ -1,5 +1,5 @@
 import Overlay from './Overlay';
 
-export * from './Overlay';
+export { Overlay } from './Overlay';
 
 export default Overlay;

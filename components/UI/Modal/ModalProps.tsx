@@ -1,5 +1,5 @@
 import React, {ReactNode} from 'react';
-export default interface ModalInterface {
+export default interface ModalProps {
     open: boolean;
     trigger?: ReactNode;
     toggle: any;
@@ -13,7 +13,6 @@ export default interface ModalInterface {
     // aria label or aria labelled by should be included in usage of modal component
     ariaLabel?: string;
     ariaLabelledBy?: string;
-    
     focusLockDelay?: number;
     closeIconColor?: string;
     sizeClasses?: string;

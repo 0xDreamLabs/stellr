@@ -1,7 +1,7 @@
 import React from 'react';
 import { DividerProps } from './DividerProps';
 
-const Divider = ({
+export const Divider = ({
   horizontal, vertical, children, className,
 }: DividerProps) => {
   if (horizontal) {

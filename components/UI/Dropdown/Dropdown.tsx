@@ -2,15 +2,11 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useEffect, ReactNode } from 'react';
-import ButtonInterface from '../Button/ButtonProps';
-import DropdownProps from './DropdownProps';
-import IconInterface from '../Icon/IconProps';
-import Button from '../Button/Button';
-import Icon from '../Icon/Icon';
+import { Button, ButtonProps, DropdownProps, Icon, IconProps } from '../'
 
 type TriggerType = {
-  button:ButtonInterface;
-  icon:IconInterface;
+  button:ButtonProps;
+  icon:IconProps;
   trigger:ReactNode;
   text?:string;
   openDropDown: boolean;
@@ -54,7 +50,7 @@ const Trigger = ({
   );
 };
 
-const Dropdown = ({
+export const Dropdown = ({
   className,
   dropClassName,
   dropBackgroundColor,

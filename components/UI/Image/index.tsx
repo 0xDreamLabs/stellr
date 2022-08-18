@@ -1,5 +1,5 @@
 import Image from './Image';
 
-export * from './Image';
+export { ImageComponent } from './Image';
 
 export default Image;

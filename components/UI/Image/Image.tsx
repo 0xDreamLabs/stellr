@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-import ImageInterface from './ImageInterface';
+import ImageProps from './ImageProps';
 
-const ImageComponent = ({
+export const ImageComponent = ({
   src,
   alt,
   className,
@@ -14,7 +14,7 @@ const ImageComponent = ({
   omitMarginAuto,
   marginBottom,
   setIsImgLoading,
-}: ImageInterface) => {
+}: ImageProps) => {
   let defaultStyles = '';
 
   defaultStyles = circle ? 'rounded-full border-primary-500 border-2 p-1 ' : '';

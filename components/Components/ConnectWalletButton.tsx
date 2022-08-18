@@ -1,7 +1,7 @@
 // @TODO this is temporary
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
-import Button from '../UI/Button/Button';
+import { Button } from '../UI';
 // import ConnectWalletModal from './ConnectWalletModal';
 
 const ConnectWalletButton = () => {

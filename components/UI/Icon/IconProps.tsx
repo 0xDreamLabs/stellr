@@ -1,5 +1,4 @@
 import { ColorOptions, SizeOptions } from "../../../interfaces/types";
-
 export type IconProps = {
     name: string;
     color:  ColorOptions;
@@ -8,6 +7,6 @@ export type IconProps = {
     className?: string;
     position?: 'left' | 'right' | 'none';
     rotate?: boolean;
-} & {
-	[key: string]: JSX.Element;
 };
+
+export type IconMap =  { [key: string]: JSX.Element; };

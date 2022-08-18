@@ -1,5 +1,5 @@
 import React from 'react';
-import LoadingInterface from './LoadingInterface';
+import LoadingProps from './LoadingProps';
 
 function getLoaderColor(color: string | undefined) {
   switch (color) {
@@ -39,14 +39,14 @@ function getLoaderColor(color: string | undefined) {
   }
 }
 
-const Loading = ({
+export const Loading = ({
   color,
   message,
   children,
   isButton,
   className,
   messageClassName,
-}: LoadingInterface) => {
+}: LoadingProps) => {
   const c = getLoaderColor(color);
   const b = isButton ? 'border-2 border-t-2' : 'border-8 border-t-8';
   return (

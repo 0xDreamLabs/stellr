@@ -1,5 +1,5 @@
 import Marquee from './Marquee';
 
-export * from './Marquee';
+export { Marquee } from './Marquee';
 
 export default Marquee;

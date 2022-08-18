@@ -1,5 +1,5 @@
 type lol = [any, any];
-export type ToggleInterface {
+export type ToggleProps = {
     option: any;
     setOption:(newOption:any) => void;
     options: [any, any];

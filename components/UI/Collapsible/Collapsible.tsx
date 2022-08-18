@@ -3,7 +3,7 @@ import ReactCollapsible from 'react-collapsible';
 import { v4 as uuidv4 } from 'uuid';
 import { CollapsibleProps } from './CollapsibleProps';
 
-const Collapsible = (props: CollapsibleProps) => {
+export const Collapsible = (props: CollapsibleProps) => {
   const {
     collapsibleId, ariaLabel, trigger, transitionTime, open, children,
   } = props;

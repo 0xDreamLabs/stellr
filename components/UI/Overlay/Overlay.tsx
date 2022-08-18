@@ -3,11 +3,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import FocusLock from 'react-focus-lock';
 import Icon from '../Icon/Icon';
-import OverlayInterface from './OverlayInterface';
+import OverlayProps from './OverlayProps';
 
-const Overlay = ({
+export const Overlay = ({
   duration, children, dismiss, omitPadding, maxWidth, ariaLabel, ariaLabelledBy, omitDismissX, open,
-}: OverlayInterface) => {
+}: OverlayProps) => {
   const [readyToDisplay, setReadyToDisplay] = useState(false);
   const [display, setDisplay] = useState(false);
 

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import FocusLock from 'react-focus-lock';
-import ModalInterface from './ModalInterface';
+import ModalProps from './ModalProps';
 
 function CloseX({
   toggle,
@@ -68,7 +68,7 @@ function getPositionStyles(position: string) {
   }
   return positionStyles;
 }
-const Modal = ({
+export const Modal = ({
   open,
   trigger,
   toggle,
@@ -89,7 +89,7 @@ const Modal = ({
   closeXClassName,
   omitMargin,
   omitRounded,
-}: ModalInterface) => {
+}: ModalProps) => {
   const [focusLocked, setFocusLocked] = useState(false);
   const positionStyles = getPositionStyles(position);
   useEffect(() => {
