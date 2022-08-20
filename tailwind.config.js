@@ -128,8 +128,8 @@ module.exports = {
           left: 0,
           'background-color':  '#fe5757',
           // animation: 'colorChange 30s ease-in-out infinite',
-          'animation-fill-mode': 'both',
-          'mix-blend-mode': 'overlay',
+          '-webkit-animation-fill-mode': 'both',
+          '-webkit-mix-blend-mode': 'overlay',
         },
         '.animation-gradient-dark':{
           'background': 'linear-gradient(to bottom, #000000 0%, #121212 100%)'
