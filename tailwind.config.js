@@ -36,6 +36,7 @@ module.exports = {
         'gradient': {
           color: `linear-gradient(90deg,#53A0FD, #C5FF5C,#B7B0FF,#53A0FD, #C5FF5C, #B7B0FF)`,
         },
+        
       },
       animation: {
         'marquee': 'marquee 136.863s linear infinite',
@@ -43,6 +44,8 @@ module.exports = {
         'marquee-2': 'marquee-2 136.863s linear infinite',
         'marquee-reverse-2': 'marquee-reverse-2 136.863s linear infinite',
         'rainbow': 'rainbow 5s linear infinite',
+        'colorChange': 'colorChange 30s ease-in-out infinite',
+
       },
       keyframes: {
         'marquee': {
@@ -64,6 +67,11 @@ module.exports = {
         'rainbow': {
           '0%': {'background-position': '0 50%'},
           '100%': {'background-position': '400% 50%'},
+        },
+        'colorChange': {
+          '0%': {opacity: 0},
+          '50%': {opacity: .9},
+          '100%': {opacity: 0}
         },
       },
       flex: {
@@ -112,6 +120,23 @@ module.exports = {
           'animationIterationCount': `infinite`,
           'animationTimingFunction': `linear`,
         },
+        '.filter': {
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          'background-color':  '#fe5757',
+          // animation: 'colorChange 30s ease-in-out infinite',
+          'animation-fill-mode': 'both',
+          'mix-blend-mode': 'overlay',
+        },
+        '.animation-gradient-dark':{
+          'background': 'linear-gradient(to bottom, #000000 0%, #121212 100%)'
+        },
+        '.animation-gradient':{
+          background: 'linear-gradient(to bottom, #d1d5db 0%, #5788fe 100%)'
+        }
       });
     }),
     plugin(({addUtilities}) => {

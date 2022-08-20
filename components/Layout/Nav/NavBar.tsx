@@ -3,7 +3,7 @@ import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 
 const NavBar = () => (
-  <header className="h-16 w-full opacity-[98%] bg-white dark:bg-primary-dark-500 text-black dark:text-white sticky top-0 z-50">
+  <header className="h-16 w-full opacity-[98%] bg-transparent text-black dark:text-white sticky top-0 z-50">
     <nav className="w-full h-full sticky">
       <DesktopNav />
       <MobileNav />

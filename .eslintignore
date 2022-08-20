@@ -4,3 +4,6 @@ cache
 coverage
 /interfaces
 hardat.config.ts
+tailwind.config.js
+/pages/index.tsx
+/public/animation.js
