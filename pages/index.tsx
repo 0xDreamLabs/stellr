@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import type { NextPage, GetStaticProps } from 'next';
 import { useTranslation } from 'react-i18next';
 import { loadTranslations } from 'ni18n';
+
 import { ni18nConfig } from '../ni18n.config';
 import Layout from '../components/Layout/Layout';
+import { useGlobalContext } from '../providers/GlobalProvider';
 
 const Home: NextPage = () => {
   const { t } = useTranslation('home');
+  const { setPageTitle, setMetaDescription } = useGlobalContext();
+
+  useEffect(() => {
+    setPageTitle('Home | Stellr');
+    setMetaDescription('Home page of Stellr');
+  }, []);
 
   return (
     <Layout>
