@@ -1,9 +1,12 @@
 import React from 'react';
+import { appWithI18Next } from 'ni18n';
 import '../styles/globals.css';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps }: AppProps) {
+import { ni18nConfig } from '../ni18n.config';
+
+function Stellr({ Component, pageProps }: AppProps) {
   return (
     <div className="app">
       <Head>
@@ -16,4 +19,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default appWithI18Next(Stellr, ni18nConfig);

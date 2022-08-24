@@ -6,4 +6,4 @@ coverage
 hardat.config.ts
 tailwind.config.js
 next.config.js
-lingui.config.js
+ni18n.config.ts
