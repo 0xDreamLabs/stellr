@@ -1,6 +1,5 @@
 import React from 'react';
 import type { NextPage } from 'next';
-import { Trans } from '@lingui/macro';
 
 import Layout from '../components/Layout/Layout';
 
@@ -16,10 +15,7 @@ const Home: NextPage = () => (
         >
           <h2>Deploy &rarr;</h2>
           <p>
-            <Trans id="next-explanation">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </Trans>
-
+            Instantly deploy your Next.js site to a public URL with Vercel.
           </p>
 
         </a>
