@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Collapsible from '../UI/Collapsible';
-import Icon from '../UI/Icon';
+import Collapsible from '../UI/Collapsible/Collapsible';
+import { Icon } from '../UI';
 
 const Faq = ({ question, answer, id }: { question:string, answer: string, id:number }) => {
   const [open, setOpen] = useState(false);

@@ -1,9 +1,9 @@
 import React from 'react';
-import LayoutInterface from '../../interfaces/LayoutInterface';
+import { LayoutProps } from './LayoutProps';
 import NavBar from './Nav/NavBar';
 import Footer from './Footer/Footer';
 
-const Layout = ({ noNav, noFooter, children }: LayoutInterface) => (
+const Layout = ({ noNav, noFooter, children }: LayoutProps) => (
   <>
     {noNav ? null : (
       <NavBar />

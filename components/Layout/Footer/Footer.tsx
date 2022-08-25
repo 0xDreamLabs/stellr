@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Button from '../../UI/Button';
-import Divider from '../../UI/Divider';
+import { Button, Divider } from '../../UI';
 import Discord from '../../UI/icons/discord';
 import Instagram from '../../UI/icons/instagram';
 import Twitter from '../../UI/icons/twitter';
