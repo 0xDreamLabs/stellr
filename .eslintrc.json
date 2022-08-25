@@ -40,6 +40,7 @@
          "react/function-component-definition": "off",
          "react/require-default-props": "off",
 <<<<<<< HEAD
+<<<<<<< HEAD
 		 "import/prefer-default-export": "off",
 		 "import/no-named-as-default": "off"
 =======
@@ -47,5 +48,10 @@
             "code": 150
          }]
 >>>>>>> stash wip
+=======
+         "max-len": ["error", {
+            "code": 150
+         }]
+>>>>>>> e337f0fa881e84dedde04f9415de3bc492e7260c
     }
 }
