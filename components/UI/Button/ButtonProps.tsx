@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
-import { IconProps } from "../Icon/IconProps";
-import { ColorOptions, SizeOptions } from "../../../interfaces/types";
+import { ReactNode } from 'react';
+import { IconProps } from '../Icon/IconProps';
+import { ColorOptions, SizeOptions } from '../../../interfaces/types';
 
 export type ButtonProps = {
   // button type is import for accessibility
@@ -18,5 +18,4 @@ export type ButtonProps = {
   target?: string;
   disabled?: boolean;
   size?: SizeOptions;
-}
-
+};

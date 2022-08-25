@@ -6,7 +6,6 @@ export * from './Divider';
 export * from './Dropdown';
 export * from './Icon';
 export * from './Image';
-export * from './Button';
 export * from './Loading';
 export * from './Marquee';
 export * from './Modal';

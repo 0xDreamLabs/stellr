@@ -1,17 +1,17 @@
-import React, {ReactNode} from 'react';
+import { ReactNode } from 'react';
 
 export type OverlayProps = {
-    children: ReactNode;
-    dismiss: () => void;
-    open: boolean;
-    maxWidth: string;
-    
-    omitPadding?: boolean;
-    duration?: string;
+  children: ReactNode;
+  dismiss: () => void;
+  open: boolean;
+  maxWidth: string;
 
-    // ALWAYS add an aria label or aria labelled by 
-    ariaLabel?: string;
-    ariaLabelledBy?: string;
+  omitPadding?: boolean;
+  duration?: string;
 
-    omitDismissX?: boolean; 
+  // ALWAYS add an aria label or aria labelled by
+  ariaLabel?: string;
+  ariaLabelledBy?: string;
+
+  omitDismissX?: boolean;
 };

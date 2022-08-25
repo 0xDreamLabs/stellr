@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 export type ContainerProps = {
-    margin?: string;
-    padding?: string;
-    className?: string;
-    children: ReactNode;
+  margin?: string;
+  padding?: string;
+  className?: string;
+  children: ReactNode;
 };

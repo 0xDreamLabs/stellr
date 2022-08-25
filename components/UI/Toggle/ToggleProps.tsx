@@ -1,10 +1,9 @@
-type lol = [any, any];
 export type ToggleProps = {
-    option: any;
-    setOption:(newOption:any) => void;
-    options: [any, any];
-    option1Text?: string;
-    option2Text?: string;
-    toggleColor?: string;
-    toggleBgColor?: string;
+  option: any;
+  setOption:(newOption:any) => void;
+  options: [any, any];
+  option1Text?: string;
+  option2Text?: string;
+  toggleColor?: string;
+  toggleBgColor?: string;
 };
