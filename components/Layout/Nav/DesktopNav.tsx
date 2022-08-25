@@ -10,7 +10,9 @@ const DesktopNav = () => (
     <Link href="/">
       <div className="flex items-center hover:bg-primary-400 md:py-2 md:px-4">
         {/* <Logo formattedClassName='w-12 h-12' gradient gradientId='desktop-logo'/> */}
-        <h2 className="ml-4 font-semibold text-xl text-transparent bg-clip-text bg-gradient-to-br from-primary-400 via-primary-500 to-secondary-500"> Stellr </h2>
+        <h2 className="ml-4 font-semibold text-xl text-transparent bg-clip-text bg-gradient-to-br from-primary-400 via-primary-500 to-secondary-500">
+          Stellr
+        </h2>
       </div>
     </Link>
     <div className="mx-4 my-2 flex items-center">

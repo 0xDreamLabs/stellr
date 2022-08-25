@@ -56,7 +56,7 @@ const Trigger = ({
 
 export const Dropdown = ({
   className,
-  dropClassName,
+  dropClassName = '',
   dropBackgroundColor,
   children,
   button,
@@ -86,7 +86,11 @@ export const Dropdown = ({
   const opacity = openDropDown ? 'opacity-100' : 'opacity-0';
   const height = openDropDown ? 'h-auto' : '0';
   return (
-    <div id={id} className={`relative inline-block top-0 ${dropBackgroundColor || 'bg-transparent'} border-none ${className || ''}`} aria-label={ariaLabel}>
+    <div
+      id={id}
+      className={`relative inline-block top-0 ${dropBackgroundColor || 'bg-transparent'} border-none ${className || ''}`}
+      aria-label={ariaLabel}
+    >
       <Trigger
         button={button}
         icon={icon}
@@ -95,7 +99,10 @@ export const Dropdown = ({
         openDropDown={openDropDown}
         setDropDown={setDropDown}
       />
-      <div className={`z-30 transition duration-200 overflow-hidden absolute right-0 shadow-xs ${visibility} ${opacity} ${height} ${display} ${dropClassName || ''}`}>
+      <div //  this line break shouldn't cause issues but if it does look here first
+        className={`z-30 transition duration-200 overflow-hidden absolute
+         right-0 shadow-xs ${visibility} ${opacity} ${height} ${display} ${dropClassName}`}
+      >
         {children}
       </div>
     </div>
