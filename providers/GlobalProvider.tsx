@@ -30,7 +30,7 @@ export default function GlobalProvider({ children }:{ children:ReactNode }) {
         <Head>
           <title>{pageTitle}</title>
           <meta name="description" content={metaDescription} />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/images/favicon.ico" />
         </Head>
         {children}
       </GlobalContext.Provider>
