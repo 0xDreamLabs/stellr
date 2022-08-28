@@ -15,6 +15,7 @@ const getInitialLanguage = (preferredLanguage: string) => {
 
     // if no language set in local storage set language to the preferred language... if we don't have it, it should default to english
     window.localStorage.setItem('lang', language);
+    // this sets the lang part of the <html lang=""> tag in the dom
     root.lang = language;
   }
   return language;
@@ -22,6 +23,7 @@ const getInitialLanguage = (preferredLanguage: string) => {
 
 const getPreferredLanguage = () => {
   let preferredLanguage = 'en';
+  // navigator.language is how you check the browser for the preferred language
   if (navigator && navigator.language) {
     preferredLanguage = navigator.language;
   }
