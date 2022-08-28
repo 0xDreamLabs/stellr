@@ -13,3 +13,5 @@ artifacts
 
 .next
 .yarn
+/public/sitemap.xml
+/public/robots.txt
