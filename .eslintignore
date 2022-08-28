@@ -5,3 +5,7 @@ coverage
 /interfaces
 hardat.config.ts
 tailwind.config.js
+next.config.js
+ni18n.config.ts
+/components/UI/icons
+/components/UI/backgroundSvgs

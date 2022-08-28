@@ -27,10 +27,20 @@ const Footer = () => (
             <Discord formattedClassName="flex items-center mr-8 w-16 h-16 text-primary-500" />
           </div>
           <div>
-            <p className="text-sm"> Our Discord server is a great place to meet the team, chat with us and become part of an exciting and rapidly growing community </p>
+            <p className="text-sm">
+              Our Discord server is a great place to meet the team, chat with us and become part of an exciting and rapidly growing community
+            </p>
           </div>
         </div>
-        <Button text="Join Our Discord" ariaLabel="Click to join 0xWF discord" color="primary" type="button" href="https://discord.gg/d272FRg2Xm" target="_blank" className="py-2 px-6 hover:animate-pulse" />
+        <Button
+          text="Join Our Discord"
+          ariaLabel="Click to join the Stellr discord"
+          color="primary"
+          type="button"
+          href="https://discord.gg/d272FRg2Xm"
+          target="_blank"
+          className="py-2 px-6 hover:animate-pulse"
+        />
       </div>
       {/* Section 3 */}
       <Divider className="mx-8" vertical />
@@ -50,7 +60,7 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div className="mt-8 text-center text-gray-600 dark:text-gray-400 text-xs">© 0xWF All rights reserved. Crafted by 0xD4V1NC1</div>
+    <div className="mt-8 text-center text-gray-600 dark:text-gray-400 text-xs">© Stellr All rights reserved. Crafted by 0xD4V1NC1 & 0xTrell</div>
   </footer>
 );
 export default Footer;

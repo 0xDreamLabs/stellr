@@ -72,7 +72,8 @@ export const Overlay = ({
         ref={containerRef}
         onKeyDown={(e:any) => checkKeyPressESC(e)}
         onClick={() => dismiss()}
-        className={`fixed h-full w-full top-0 right-0 m-0 ${readyToDisplay ? 'z-[1000] bg-black bg-opacity-50' : 'bg-transparent z-0'} transition-all duration-100`}
+        className={`fixed h-full w-full top-0 right-0 m-0 
+        ${readyToDisplay ? 'z-[1000] bg-black bg-opacity-50' : 'bg-transparent z-0'} transition-all duration-100`}
         {...ariaLabelProps}
       >
         <div className="relative w-full h-full">
