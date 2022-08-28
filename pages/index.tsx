@@ -19,7 +19,7 @@ const Home: NextPage = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-white dark:bg-primary-dark-500 mx-8">
+      <div className="">
         <h1 className="text-3xl font-bold underline text-red-700 dark:text-red-500">
           {t('hello')}
         </h1>
