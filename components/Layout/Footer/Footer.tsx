@@ -34,7 +34,7 @@ const Footer = () => (
         </div>
         <Button
           text="Join Our Discord"
-          ariaLabel="Click to join 0xWF discord"
+          ariaLabel="Click to join the Stellr discord"
           color="primary"
           type="button"
           href="https://discord.gg/d272FRg2Xm"
@@ -60,7 +60,7 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div className="mt-8 text-center text-gray-600 dark:text-gray-400 text-xs">© 0xWF All rights reserved. Crafted by 0xD4V1NC1</div>
+    <div className="mt-8 text-center text-gray-600 dark:text-gray-400 text-xs">© Stellr All rights reserved. Crafted by 0xD4V1NC1 & 0xTrell</div>
   </footer>
 );
 export default Footer;

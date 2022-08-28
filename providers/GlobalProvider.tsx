@@ -11,7 +11,7 @@ export type GlobalState = {
 };
 
 export const GlobalContext = createContext<GlobalState>({
-  pageTitle: '0xWF',
+  pageTitle: 'Stellr',
   setPageTitle: () => { /* empty */ },
   metaDescription: '',
   setMetaDescription: () => { /* empty */ },
@@ -28,14 +28,15 @@ export default function GlobalProvider({ children }:{ children:ReactNode }) {
     <div className="app">
       <GlobalContext.Provider value={globalValues}>
         <Head>
-          <title>{pageTitle}</title>
+          <title key="title">{pageTitle}</title>
           <meta name="description" content={metaDescription} />
+          <meta charSet="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/images/favicon.ico" />
         </Head>
         {children}
       </GlobalContext.Provider>
     </div>
-
   );
 }
 
