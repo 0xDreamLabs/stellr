@@ -1,10 +1,7 @@
 import React from 'react';
-import i18next from 'i18next';
 import { useLanguageSettings } from '../../hooks';
 
 const ToggleLanguage = ({ toggleText } : { toggleText:string }) => {
-  const lang = i18next.language;
-  console.log('lang', lang);
   const { setLocalStorageLanguage, langSetting } = useLanguageSettings();
 
   return (
