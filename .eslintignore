@@ -9,3 +9,4 @@ next.config.js
 ni18n.config.ts
 /components/UI/icons
 /components/UI/backgroundSvgs
+next-sitemap.config.js
