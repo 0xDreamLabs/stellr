@@ -1,0 +1,35 @@
+name: PR Checks
+on: 
+  push:
+    branches: 
+      - main
+    pull_request:
+      types:
+        - opened
+        - reopened
+        - edited
+        - synchronize
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with: 
+          node-version-file: '.nvmrc'
+      - name: Install NextJS Dependencies with Yarn
+        run: |
+          yarn install
+          yarn run build
+      # - name: Yarn Build
+      #   run: |
+      #     yarn build
+
+    # lighthouse:
+    #   runs-on: ubuntu-latest
+    #   steps:
+    #     - uses: actions/checkout@v2
+    #     - name: Audit URLs using Lighthouse
+    #       uses: treosh/lighthouse-ci-action@v9
+  
