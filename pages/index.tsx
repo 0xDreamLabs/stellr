@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       <SEO title="Home" description="Stellr Home Page" canonical="https://www.stellr.social/" />
       <Layout>
         <div className="text-black dark:text-white">
-          <h1 className="text-3xl font-bold underline">
+          <h1 className='text-3xl font-bold underline'>
             {t('hello')}
           </h1>
           <ToggleLanguage toggleText={t('Toggle Language')} />
