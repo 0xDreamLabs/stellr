@@ -1,34 +1,33 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import type { NextPage, GetStaticProps } from 'next';
 import { useTranslation } from 'react-i18next';
 import { loadTranslations } from 'ni18n';
 
 import { ni18nConfig } from '../ni18n.config';
 import Layout from '../components/Layout/Layout';
-import { useGlobalContext } from '../providers/GlobalProvider';
+import SEO from '../components/Components/SEO';
+
 import ToggleLanguage from '../components/Components/toggleLanguage';
 
 const Home: NextPage = () => {
   const { t } = useTranslation('home');
-  const { setPageTitle, setMetaDescription } = useGlobalContext();
-
-  useEffect(() => {
-    setPageTitle('Home | Stellr');
-    setMetaDescription('Home page of Stellr');
-  }, []);
 
   return (
-    <Layout>
-      <div className="min-h-screen bg-white dark:bg-primary-dark-500">
-        <h1 className="text-3xl font-bold underline text-red-500">
-          {t('hello')}
-        </h1>
-        <ToggleLanguage toggleText={t('Toggle Language')} />
-        <div>
-          <p>{t('Some Text')}</p>
+    <>
+      <SEO title="Home" description="Stellr Home Page" canonical="https://www.stellr.social/" />
+      <Layout>
+        <div className="text-black dark:text-white">
+          <h1 className="text-3xl font-bold underlin">
+            {t('hello')}
+          </h1>
+          <ToggleLanguage toggleText={t('Toggle Language')} />
+          <div>
+            <p>{t('Some Text')}</p>
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
+
   );
 };
 
