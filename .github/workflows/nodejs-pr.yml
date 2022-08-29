@@ -21,9 +21,10 @@ jobs:
       - name: Install NextJS Dependencies with Yarn
         run: |
           yarn install
-      - name: Yarn Build
-        run: |
           yarn build
+      # - name: Yarn Build
+      #   run: |
+      #     yarn build
 
   lighthouse:
     runs-on: ubuntu-latest
