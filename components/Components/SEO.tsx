@@ -30,8 +30,8 @@ export default function Seo({
       <meta name="robots" content="index,follow" />
 
       <meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)" />
-      <meta name="theme-color" content="#FFF" media="(prefers-color-scheme: light)" />
-      <meta name="theme-color" content="#B7B0FF" />
+      <meta name="theme-color" content="#221748" media="(prefers-color-scheme: light)" />
+      <meta name="theme-color" content="#221748" />
       <link rel="canonical" href={canonical ?? DOMAIN} />
 
       <link rel="shortcut icon" href="/images/favicon.ico" />

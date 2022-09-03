@@ -5,10 +5,10 @@ const ToggleLanguage = ({ toggleText } : { toggleText:string }) => {
   const { setLocalStorageLanguage, langSetting } = useLanguageSettings();
 
   return (
-    <div>
+    <div className="my-4">
       <button
         type="button"
-        className="py-2 px-4 bg-green-500 dark:bg-green-700"
+        className="py-2 px-4 bg-primary-500 dark:bg-primary-700 rounded-full"
         onClick={() => setLocalStorageLanguage(langSetting === 'en' ? 'es' : 'en')}
       >
         {toggleText}
