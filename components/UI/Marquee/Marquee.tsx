@@ -7,7 +7,7 @@ export const Marquee = ({ reverse, marqueeText }:{ reverse?: boolean, marqueeTex
     animationClass = 'motion-safe:animate-marquee-reverse';
   }
   return (
-    <div className="font-semibold uppercase text-outline-marquee bg-primary-400 dark:bg-primary-dark-400 py-2 text-3xl text-white">
+    <div className="font-semibold uppercase text-outline-marquee bg-primary-400 dark:bg-primary-700 py-2 text-3xl text-white">
       <div id="marquee-container" className="flex flex-row overflow-x-hidden relative w-full">
         <div id="marquee" className={`flex flex-0-0-auto flex-row items-center min-w-full ${animationClass}`}>
           {[...Array(10)].map(() => {

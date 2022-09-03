@@ -15,7 +15,7 @@ const nav = {
         {
           label: 'Settings',
           icon: 'cog',
-          href: '/explore',
+          href: '/settings',
           id: uuidv4(),
           ariaLabel: 'Link to Settings Page',
         },

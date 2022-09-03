@@ -6,7 +6,6 @@ import { Button, Overlay, Icon } from '../../UI';
 // import Logo from '../../UI/icons/logo';
 
 import nav from './nav.enum';
-import AddressInformationButton from '../../Components/AddressInformationButton';
 
 const MobileHeaderNav = ({ setIsOverlayOpen }: { setIsOverlayOpen: (isOpen: boolean) => void }) => {
   const scrollDir = useScrollDirection({ initialDirection: '' });
@@ -20,7 +19,7 @@ const MobileHeaderNav = ({ setIsOverlayOpen }: { setIsOverlayOpen: (isOpen: bool
         onClick={() => setIsOverlayOpen(true)}
         color="none"
       >
-        <div id="profile-img-placeholder" className="bg-blue-500 rounded-full w-12 h-12" />
+        <div id="profile-img-placeholder" className="bg-primary-500 rounded-full w-12 h-12" />
       </Button>
       <StellrLink href="/">
         {/* <Logo formattedClassName='w-12 h-12' gradient gradientId='mobile-logo' /> */}
@@ -61,6 +60,11 @@ const MobileMenuOptions = ({
     openFromDirection="left"
   >
     <ul className="mb-10">
+      <li className="pb-4">
+        <StellrLink href="/profile" ariaLabel="Link to your Profile">
+          <div id="profile-img-placeholder-menu-options" className="bg-primary-500 rounded-full w-16 h-16" />
+        </StellrLink>
+      </li>
       <li id="display-name" className="font-bold text-lg">Display Name</li>
       <li id="lens-handle" className="text-sm pb-4">@0xD4V1NC1</li>
 
@@ -77,7 +81,7 @@ const MobileMenuOptions = ({
         </p>
       </li>
       {menuOptions.menuOptions.items.map((menuOption: any) => (
-        <li key={menuOption.label} className="pr-6 hover:bg-gray-200 dark:hover:bg-primary-dark-400 rounded">
+        <li key={menuOption.label} className="pr-6 hover:bg-gray-200 dark:hover:bg-primary-700 rounded">
           <Button
             type="button"
             color="none"
@@ -85,15 +89,12 @@ const MobileMenuOptions = ({
             href={menuOption.href || ''}
             className="flex w-9/10 mx-4 my-2 items-center cursor-pointer py-1 shadow-none rounded"
           >
-            <Icon name={menuOption.icon} size="large" color="primary" className="mr-3" />
-            <p className="text-lg text-primary-500 dark:text-white">{menuOption.label}</p>
+            <Icon name={menuOption.icon} size="large" color="black" className="mr-3" />
+            <p className="text-lg text-black dark:text-white">{menuOption.label}</p>
           </Button>
         </li>
       ))}
     </ul>
-    <div className="mx-4 my-2 flex items-center">
-      <AddressInformationButton address="fake address" connector={null} />
-    </div>
   </Overlay>
 );
 
@@ -112,14 +113,17 @@ const MobileBottomNav = ({ mobileNavConfig }: { mobileNavConfig: any }) => {
   if (!mobileNavConfig) return null;
 
   return (
-    <div
-      id="mobile-nav-bottom"
-      className="flex justify-between px-4 py-4 md:hidden bg-white dark:bg-black bottom-0 fixed w-full rounded-t-2xl border-t"
-    >
-      {mobileNavConfig.items.map((navItem: any) => (
-        <NavItem key={navItem.id} navItem={navItem} />
-      ))}
+    <div id="bottom-nav-wrapper" className="w-full">
+      <div
+        id="mobile-nav-bottom"
+        className="flex justify-between p-6 md:hidden bg-primary-100 dark:bg-primary-800 bottom-0 fixed w-[90%] rounded-full border-t mb-4 mx-4 shadow-lg shadow-primary-500/50"
+      >
+        {mobileNavConfig.items.map((navItem: any) => (
+          <NavItem key={navItem.id} navItem={navItem} />
+        ))}
+      </div>
     </div>
+
   );
 };
 

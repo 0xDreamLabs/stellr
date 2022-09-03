@@ -17,7 +17,7 @@ const NotFoundPage : NextPage = () => {
       <SEO title="404" />
       <Layout>
         <section>
-          <div className="bg-white text-black dark:bg-primary-dark-500 dark:text-white">
+          <div className="bg-white text-black dark:bg-primary-800 dark:text-white">
             <div className="flex h-screen">
               <div className="m-auto text-center">
                 <div>
