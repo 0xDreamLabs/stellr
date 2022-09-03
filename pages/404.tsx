@@ -9,7 +9,7 @@ import { ni18nConfig } from '../ni18n.config';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/Components/SEO';
 
-const NotFound : NextPage = () => {
+const NotFoundPage : NextPage = () => {
   const { t } = useTranslation('404');
 
   return (
@@ -301,4 +301,4 @@ export const getStaticProps: GetStaticProps = async (props) => ({
     ])),
   },
 });
-export default NotFound;
+export default NotFoundPage;

@@ -10,7 +10,7 @@ import DarkModeToggle from '../components/Components/DarkModeToggle';
 
 import ToggleLanguage from '../components/Components/ToggleLanguage';
 
-const Notifications: NextPage = () => {
+const NotificationsPage: NextPage = () => {
   const { t } = useTranslation('notifications');
 
   return (
@@ -41,4 +41,4 @@ export const getStaticProps: GetStaticProps = async (props) => ({
     ])),
   },
 });
-export default Notifications;
+export default NotificationsPage;

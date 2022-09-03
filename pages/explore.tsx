@@ -10,7 +10,7 @@ import DarkModeToggle from '../components/Components/DarkModeToggle';
 
 import ToggleLanguage from '../components/Components/ToggleLanguage';
 
-const Explore: NextPage = () => {
+const ExplorePage: NextPage = () => {
   const { t } = useTranslation('explore');
 
   return (
@@ -41,4 +41,4 @@ export const getStaticProps: GetStaticProps = async (props) => ({
     ])),
   },
 });
-export default Explore;
+export default ExplorePage;
