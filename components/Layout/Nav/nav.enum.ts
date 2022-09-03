@@ -2,6 +2,25 @@ import { v4 as uuidv4 } from 'uuid';
 
 const nav = {
   mobile: {
+    menuOptions: {
+      label: 'Menu Options',
+      items: [
+        {
+          label: 'Profile',
+          icon: 'user',
+          href: '/profile',
+          id: uuidv4(),
+          ariaLabel: 'Link to Profile Page',
+        },
+        {
+          label: 'Settings',
+          icon: 'cog',
+          href: '/explore',
+          id: uuidv4(),
+          ariaLabel: 'Link to Settings Page',
+        },
+      ],
+    },
     bottomNav: {
       label: 'Navigation',
       items: [

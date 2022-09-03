@@ -106,13 +106,13 @@ function getSizeClassName(size: string) {
     case 'large':
       return 'w-8 h-8 md:w-6 md:h-6';
     case 'xlarge':
-      return 'w-8 h-8';
-    case '2xlarge':
       return 'w-12 h-12';
-    case '3xlarge':
+    case '2xlarge':
       return 'w-16 h-16';
-    case '4xlarge':
+    case '3xlarge':
       return 'w-20 h-20';
+    case '4xlarge':
+      return 'w-24 h-24';
     default:
       return size;
   }
