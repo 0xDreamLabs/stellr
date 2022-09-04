@@ -9,10 +9,11 @@ import nav from './nav.enum';
 
 const MobileHeaderNav = ({ setIsOverlayOpen }: { setIsOverlayOpen: (isOpen: boolean) => void }) => {
   const scrollDir = useScrollDirection({ initialDirection: '' });
-  // controls the animations if the mobile sub bar should display based on scroll direction
-  const mobileSubBarDisplay = scrollDir === 'down' ? 'translate-y-[-100%] hidden' : 'translate-y-0';
+
+  // controls the animations if the mobile header should display based on scroll direction
+  const scrollDirectionAnimations = scrollDir === 'down' ? 'translate-y-[-100%] hidden' : 'translate-y-0';
   return (
-    <div id="mobile-nav-header" className={`transition-all ${mobileSubBarDisplay} flex justify-between px-8 py-2 h-16 md:hidden`}>
+    <div id="mobile-nav-header" className={`transition-all ${scrollDirectionAnimations} flex justify-between px-8 py-2 h-16 md:hidden`}>
       <Button
         type="button"
         ariaLabel="Open Mobile Side Menu"
@@ -46,57 +47,58 @@ const MobileHeaderNav = ({ setIsOverlayOpen }: { setIsOverlayOpen: (isOpen: bool
 const MobileMenuOptions = ({
   isOverlayOpen,
   setIsOverlayOpen,
-  menuOptions,
 }:{
   isOverlayOpen: boolean,
   setIsOverlayOpen: (state: boolean) => void,
-  menuOptions: any
-}) => (
-  <Overlay
-    open={!!isOverlayOpen}
-    dismiss={() => setIsOverlayOpen(false)}
-    ariaLabel="Mobile Navigation Options"
-    widthClasses="min-w-[80vw]"
-    openFromDirection="left"
-  >
-    <ul className="mb-10">
-      <li className="pb-4">
-        <StellrLink href="/profile" ariaLabel="Link to your Profile">
-          <div id="profile-img-placeholder-menu-options" className="bg-primary-500 rounded-full w-16 h-16" />
-        </StellrLink>
-      </li>
-      <li id="display-name" className="font-bold text-lg">Display Name</li>
-      <li id="lens-handle" className="text-sm pb-4">@0xD4V1NC1</li>
-
-      <li className="flex pb-8">
-        <p className="mr-2">
-          <span className="font-bold">1000</span>
-          {' '}
-          Following
-        </p>
-        <p>
-          <span className="font-bold">1000</span>
-          {' '}
-          Followers
-        </p>
-      </li>
-      {menuOptions.menuOptions.items.map((menuOption: any) => (
-        <li key={menuOption.label} className="pr-6 hover:bg-gray-200 dark:hover:bg-primary-700 rounded">
-          <Button
-            type="button"
-            color="none"
-            ariaLabel={`${menuOption.ariaLabel}`}
-            href={menuOption.href || ''}
-            className="flex w-9/10 mx-4 my-2 items-center cursor-pointer py-1 shadow-none rounded"
-          >
-            <Icon name={menuOption.icon} size="large" color="black" className="mr-3" />
-            <p className="text-lg text-black dark:text-white">{menuOption.label}</p>
-          </Button>
+}) => {
+  const { mobile } = nav;
+  return (
+    <Overlay
+      open={!!isOverlayOpen}
+      dismiss={() => setIsOverlayOpen(false)}
+      ariaLabel="Mobile Navigation Options"
+      widthClasses="min-w-[80vw]"
+      openFromDirection="left"
+    >
+      <ul className="mb-10">
+        <li className="pb-4">
+          <StellrLink href="/profile" ariaLabel="Link to your Profile">
+            <div id="profile-img-placeholder-menu-options" className="bg-primary-500 rounded-full w-16 h-16" />
+          </StellrLink>
         </li>
-      ))}
-    </ul>
-  </Overlay>
-);
+        <li id="display-name" className="font-bold text-lg">Display Name</li>
+        <li id="lens-handle" className="text-sm pb-4">@0xD4V1NC1</li>
+
+        <li className="flex pb-8">
+          <p className="mr-2">
+            <span className="font-bold">1000</span>
+            {' '}
+            Following
+          </p>
+          <p>
+            <span className="font-bold">1000</span>
+            {' '}
+            Followers
+          </p>
+        </li>
+        {mobile.menuOptions.items.map((menuOption: any) => (
+          <li key={menuOption.label} className="pr-6 hover:bg-gray-200 dark:hover:bg-primary-700 rounded">
+            <Button
+              type="button"
+              color="none"
+              ariaLabel={`${menuOption.ariaLabel}`}
+              href={menuOption.href || ''}
+              className="flex w-9/10 mx-4 my-2 items-center cursor-pointer py-1 shadow-none rounded"
+            >
+              <Icon name={menuOption.icon} size="large" color="black" className="mr-3" />
+              <p className="text-lg text-black dark:text-white">{menuOption.label}</p>
+            </Button>
+          </li>
+        ))}
+      </ul>
+    </Overlay>
+  );
+};
 
 const NavItem = ({ navItem }: { navItem: any }) => {
   const router = useRouter();
@@ -108,17 +110,16 @@ const NavItem = ({ navItem }: { navItem: any }) => {
   );
 };
 
-// @TODO update the props... remove ALL ANY
-const MobileBottomNav = ({ mobileNavConfig }: { mobileNavConfig: any }) => {
-  if (!mobileNavConfig) return null;
+const MobileBottomNav = () => {
+  const { mobile } = nav;
 
   return (
     <div id="bottom-nav-wrapper" className="w-full">
       <div
         id="mobile-nav-bottom"
-        className="flex justify-between p-6 md:hidden bg-primary-100 dark:bg-primary-800 bottom-0 fixed w-[90%] rounded-full border-t mb-4 mx-4 shadow-lg shadow-primary-500/50"
+        className="flex justify-between p-6 md:hidden bg-primary-100 dark:bg-primary-800 bottom-0 fixed w-[90%] rounded-full mb-4 mx-4 shadow-lg shadow-primary-400/50 dark:shadow-primary-700/50"
       >
-        {mobileNavConfig.items.map((navItem: any) => (
+        {mobile.bottomNav.items.map((navItem: any) => (
           <NavItem key={navItem.id} navItem={navItem} />
         ))}
       </div>
@@ -129,15 +130,14 @@ const MobileBottomNav = ({ mobileNavConfig }: { mobileNavConfig: any }) => {
 
 const MobileNav = () => {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
-  const { mobile } = nav;
 
   return (
     <>
       <MobileHeaderNav setIsOverlayOpen={setIsOverlayOpen} />
       {/* The Mobile Menu Options is outside of the nav header b/c with justify-between and flex...
       it would move the button over */}
-      <MobileMenuOptions isOverlayOpen={isOverlayOpen} setIsOverlayOpen={setIsOverlayOpen} menuOptions={mobile} />
-      <MobileBottomNav mobileNavConfig={mobile.bottomNav} />
+      <MobileMenuOptions isOverlayOpen={isOverlayOpen} setIsOverlayOpen={setIsOverlayOpen} />
+      <MobileBottomNav />
     </>
   );
 };
