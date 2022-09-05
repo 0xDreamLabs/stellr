@@ -22,7 +22,7 @@ const MobileHeaderNav = ({ setIsOverlayOpen }: { setIsOverlayOpen: (isOpen: bool
       >
         <div id="profile-img-placeholder" className="bg-primary-500 rounded-full w-12 h-12" />
       </Button>
-      <StellrLink href="/">
+      <StellrLink href="/" ariaLabel="Link to homepage">
         {/* <Logo formattedClassName='w-12 h-12' gradient gradientId='mobile-logo' /> */}
         <h2>Logo was here</h2>
       </StellrLink>
