@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import StellrLink from '../../Components/StellrLink';
+import StellrLink from '../../Components/StellrLink/StellrLink';
 import { useScrollDirection } from '../../../hooks';
 import { Button, Overlay, Icon } from '../../UI';
 // import Logo from '../../UI/icons/logo';
