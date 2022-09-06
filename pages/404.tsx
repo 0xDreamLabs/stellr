@@ -9,7 +9,7 @@ import { ni18nConfig } from '../ni18n.config';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/Components/SEO';
 
-const NotFound : NextPage = () => {
+const NotFoundPage : NextPage = () => {
   const { t } = useTranslation('404');
 
   return (
@@ -17,7 +17,7 @@ const NotFound : NextPage = () => {
       <SEO title="404" />
       <Layout>
         <section>
-          <div className="bg-white text-black dark:bg-primary-dark-500 dark:text-white">
+          <div className="bg-white text-black dark:bg-background-dark dark:text-white">
             <div className="flex h-screen">
               <div className="m-auto text-center">
                 <div>
@@ -301,4 +301,4 @@ export const getStaticProps: GetStaticProps = async (props) => ({
     ])),
   },
 });
-export default NotFound;
+export default NotFoundPage;

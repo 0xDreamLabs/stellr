@@ -32,8 +32,8 @@ export const Button = ({
       btnTextColor = 'text-white';
       break;
     case 'primary-dark':
-      btnBgColor = 'bg-primary-dark-500';
-      btnBgColorHover = 'hover:bg-primary-dark-700';
+      btnBgColor = 'bg-primary-700';
+      btnBgColorHover = 'hover:bg-primary-900';
       btnTextColor = 'text-white';
       break;
     case 'secondary':
@@ -52,8 +52,8 @@ export const Button = ({
       btnTextColor = 'text-white';
       break;
     case 'primary-gradient-outline':
-      btnBgColor = 'bg-white dark:bg-primary-dark-500';
-      btnBgColorHover = 'hover:bg-white dark:hover:bg-primary-dark-500';
+      btnBgColor = 'bg-white dark:bg-primary-900';
+      btnBgColorHover = 'hover:bg-white dark:hover:bg-primary-700';
       btnTextColor = 'text-transparent bg-clip-text bg-gradient-to-br from-primary-400 via-primary-500 to-secondary-500';
       break;
     case 'gray':

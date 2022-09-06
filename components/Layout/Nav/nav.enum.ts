@@ -2,7 +2,26 @@ import { v4 as uuidv4 } from 'uuid';
 
 const nav = {
   mobile: {
-    primary: {
+    menuOptions: {
+      label: 'Menu Options',
+      items: [
+        {
+          label: 'Profile',
+          icon: 'user',
+          href: '/profile',
+          id: uuidv4(),
+          ariaLabel: 'Link to Profile Page',
+        },
+        {
+          label: 'Settings',
+          icon: 'cog',
+          href: '/settings',
+          id: uuidv4(),
+          ariaLabel: 'Link to Settings Page',
+        },
+      ],
+    },
+    bottomNav: {
       label: 'Navigation',
       items: [
         {
@@ -13,12 +32,25 @@ const nav = {
           ariaLabel: 'Link to Home Page',
         },
         {
-          label: 'Members Only',
-          icon: 'user-group',
-          href: '/members-only',
+          label: 'Explore',
+          icon: 'search',
+          href: '/explore',
           id: uuidv4(),
-          ariaLabel: 'Link to Members Only Page',
-
+          ariaLabel: 'Link to Explore Page',
+        },
+        {
+          label: 'Notifications',
+          icon: 'bell',
+          href: '/notifications',
+          id: uuidv4(),
+          ariaLabel: 'Link to Notifications Page',
+        },
+        {
+          label: 'Messages',
+          icon: 'mail',
+          href: '/messages',
+          id: uuidv4(),
+          ariaLabel: 'Link to Messages Page',
         },
       ],
     },

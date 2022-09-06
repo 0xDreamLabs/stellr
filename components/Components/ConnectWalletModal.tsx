@@ -94,7 +94,7 @@ import React from 'react';
 //       paddingBottom="pb-0"
 //       size="sm"
 //     >
-//       <div className="w-full bg-white dark:bg-primary-dark-500">
+//       <div className="w-full bg-white dark:bg-primary-700">
 //         {walletOptions.map((option) => (
 //           <WalletOption
 //             key={option.name}

@@ -4,7 +4,7 @@ export type OverlayProps = {
   children: ReactNode;
   dismiss: () => void;
   open: boolean;
-  maxWidth: string;
+  widthClasses?: string;
 
   omitPadding?: boolean;
   duration?: string;
@@ -14,4 +14,5 @@ export type OverlayProps = {
   ariaLabelledBy?: string;
 
   omitDismissX?: boolean;
+  openFromDirection: 'left' | 'right';
 };

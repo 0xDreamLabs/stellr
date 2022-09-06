@@ -10,20 +10,20 @@ import DarkModeToggle from '../components/Components/DarkModeToggle';
 
 import ToggleLanguage from '../components/Components/ToggleLanguage';
 
-const HomePage: NextPage = () => {
-  const { t } = useTranslation('home');
+const MessagesPage: NextPage = () => {
+  const { t } = useTranslation('messages');
 
   return (
     <>
-      <SEO title="Home" description="Stellr Home Page" canonical="https://www.stellr.social/" />
+      <SEO title="Messages" description="Your direct messages are displayed here" canonical="https://www.stellr.social/messages" />
       <Layout>
         <div className="text-black dark:text-white">
           <h1 className="text-3xl font-bold underline">
-            {t('hello')}
+            {t('messages_title')}
           </h1>
-          <ToggleLanguage toggleText={t('Toggle Language')} />
+          <ToggleLanguage toggleText={t('language_button')} />
           <div>
-            <p>{t('Some Text')}</p>
+            <p>{t('messages_subtext1')}</p>
           </div>
           <DarkModeToggle />
         </div>
@@ -36,9 +36,9 @@ const HomePage: NextPage = () => {
 export const getStaticProps: GetStaticProps = async (props) => ({
   props: {
     ...(await loadTranslations(ni18nConfig, props.locale, [
-      'home',
+      'messages',
       'translation',
     ])),
   },
 });
-export default HomePage;
+export default MessagesPage;
