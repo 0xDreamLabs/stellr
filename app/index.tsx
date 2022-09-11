@@ -22,7 +22,7 @@ import TestSuspense from '../components/Components/TestSuspense';
 
 const HomePage: NextPage = (props: any) => {
   const { t } = useTranslation('home');
-  // const isServer = typeof window === 'undefined';
+  const isServer = typeof window === 'undefined';
   console.log('PROPS:', props);
   return (
     <>
@@ -31,6 +31,7 @@ const HomePage: NextPage = (props: any) => {
         <div className="text-black dark:text-white">
           <h1 className="text-3xl font-bold underline">
             {t('hello')}
+            HOMEMEMMEMEMEM
           </h1>
           <ErrorBoundary fallback={<Error errorMsg="Error Fetching Data" />}>
             <Suspense fallback={<Loading className="w-6 h-6" message="Loading..." />}>

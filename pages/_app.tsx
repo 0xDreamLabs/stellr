@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { appWithI18Next, useSyncLanguage } from 'ni18n';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import '@rainbow-me/rainbowkit/styles.css';
 import {
+  darkTheme,
+  lightTheme,
   getDefaultWallets,
   RainbowKitProvider,
+  // DisclaimerComponent,
 } from '@rainbow-me/rainbowkit';
 import {
   chain,
@@ -18,18 +21,18 @@ import { publicProvider } from 'wagmi/providers/public';
 
 import { ni18nConfig } from '../ni18n.config';
 import GlobalProvider from '../providers/GlobalProvider';
-import { useLanguageSettings } from '../hooks';
+import { useLanguageSettings, useHasMounted } from '../hooks';
 
 const { chains, provider } = configureChains(
-  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
+  [chain.polygon],
   [
-    alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
+    alchemyProvider({ apiKey: process.env.ALCHEMY_API_KEY }),
     publicProvider(),
   ],
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'My RainbowKit App',
+  appName: 'Stellr.Social',
   chains,
 });
 
@@ -39,15 +42,48 @@ const wagmiClient = createClient({
   provider,
 });
 
+// const Disclaimer: DisclaimerComponent = ({ Text, Link }: { Text: any, Link: any }) => (
+//   <Text>
+//     By connecting your wallet, you agree to the
+//     <Link href="https://termsofservice.xyz"> Terms of Service </Link>
+//     and acknowledge you have read and understand the protocol
+//     <Link href="https://disclaimer.xyz"> Disclaimer</Link>
+//   </Text>
+// );
+
 function Stellr({ Component, pageProps }: AppProps) {
   const { langSetting } = useLanguageSettings();
   // this controls what language is displayed based on what is fetched from the hook (local storage)
   useSyncLanguage(langSetting);
+  const hasMounted = useHasMounted();
+  // @TODO update wallet themes
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
+      <RainbowKitProvider
+        theme={{
+          lightMode: lightTheme({
+            accentColor: '#5733a6',
+            accentColorForeground: 'white',
+            borderRadius: 'large',
+          }),
+          darkMode: darkTheme({
+            accentColor: '#8c60da',
+            accentColorForeground: 'white',
+            borderRadius: 'large',
+          }),
+        }}
+        appInfo={{
+          appName: 'Stellr',
+          // disclaimer: Disclaimer,
+        }}
+        showRecentTransactions
+        chains={chains}
+        coolMode
+      >
         <GlobalProvider>
-          <Component {...pageProps} />
+          <Suspense fallback={<p> YOUR APP IS LAODING</p>}>
+            {hasMounted ? <Component {...pageProps} /> : null}
+          </Suspense>
         </GlobalProvider>
       </RainbowKitProvider>
     </WagmiConfig>
