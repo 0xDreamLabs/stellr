@@ -292,12 +292,4 @@ const NotFoundPage : NextPage = () => {
   );
 };
 
-// export const getStaticProps: GetStaticProps = async (props) => ({
-//   props: {
-//     ...(await loadTranslations(ni18nConfig, props.locale, [
-//       '404',
-//       'translation',
-//     ])),
-//   },
-// });
 export default NotFoundPage;
