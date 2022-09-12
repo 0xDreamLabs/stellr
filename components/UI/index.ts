@@ -13,3 +13,4 @@ export * from './Modal';
 export * from './Overlay';
 export * from './Toast';
 export * from './Toggle';
+export * from './Tooltip';
