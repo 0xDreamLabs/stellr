@@ -9,7 +9,6 @@ const StellrLink = ({
   href,
   as,
   replace,
-  soft,
   scroll,
   shallow,
   passHref,
@@ -24,7 +23,6 @@ const StellrLink = ({
     href={href}
     as={as}
     replace={replace}
-    soft={soft}
     scroll={scroll}
     shallow={shallow}
     passHref={passHref}
