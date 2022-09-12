@@ -1,7 +1,9 @@
-import React, { Suspense } from 'react';
+import React, { useEffect, useState } from 'react';
 import { appWithI18Next, useSyncLanguage } from 'ni18n';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
+import Router from 'next/router';
+
 import '@rainbow-me/rainbowkit/styles.css';
 import {
   darkTheme,
@@ -22,6 +24,7 @@ import { publicProvider } from 'wagmi/providers/public';
 import { ni18nConfig } from '../ni18n.config';
 import GlobalProvider from '../providers/GlobalProvider';
 import { useLanguageSettings, useHasMounted } from '../hooks';
+import { Loading } from '../components/UI';
 
 const { chains, provider } = configureChains(
   [chain.polygon],
@@ -52,10 +55,30 @@ const wagmiClient = createClient({
 // );
 
 function Stellr({ Component, pageProps }: AppProps) {
+  const [isChangingRoute, setIsChangingRoute] = useState(false);
+  const hasMounted = useHasMounted();
   const { langSetting } = useLanguageSettings();
+
   // this controls what language is displayed based on what is fetched from the hook (local storage)
   useSyncLanguage(langSetting);
-  const hasMounted = useHasMounted();
+
+  useEffect(() => {
+    const start = () => {
+      setIsChangingRoute(true);
+    };
+    const end = () => {
+      setIsChangingRoute(false);
+    };
+    Router.events.on('routeChangeStart', start);
+    Router.events.on('routeChangeComplete', end);
+    Router.events.on('routeChangeError', end);
+    return () => {
+      Router.events.off('routeChangeStart', start);
+      Router.events.off('routeChangeComplete', end);
+      Router.events.off('routeChangeError', end);
+    };
+  }, []);
+
   // @TODO update wallet themes
   return (
     <WagmiConfig client={wagmiClient}>
@@ -81,9 +104,10 @@ function Stellr({ Component, pageProps }: AppProps) {
         coolMode
       >
         <GlobalProvider>
-          <Suspense fallback={<p> YOUR APP IS LAODING</p>}>
-            {hasMounted ? <Component {...pageProps} /> : null}
-          </Suspense>
+          {/* If we are changing navigation route or app is initially loading... show loader, otherwise we show app */}
+          {isChangingRoute || !hasMounted
+            ? <div className="flex justify-center items-center h-screen"><Loading message="Loading..." className="w-12 h-12" /></div>
+            : <Component {...pageProps} /> }
         </GlobalProvider>
       </RainbowKitProvider>
     </WagmiConfig>

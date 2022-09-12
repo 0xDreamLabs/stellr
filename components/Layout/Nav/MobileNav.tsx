@@ -117,7 +117,7 @@ const MobileBottomNav = () => {
     <div id="bottom-nav-wrapper" className="w-full">
       <div
         id="mobile-nav-bottom"
-        className="flex justify-between p-6 md:hidden bg-primary-100 dark:bg-primary-800 bottom-0 fixed w-[90%] rounded-full mb-4 mx-4 shadow-lg shadow-primary-400/50 dark:shadow-primary-700/50"
+        className="flex justify-between px-6 py-4 md:hidden bg-primary-100 dark:bg-primary-800 bottom-0 fixed w-[90%] rounded-full mb-4 mx-4 shadow-lg shadow-primary-400/50 dark:shadow-primary-700/50"
       >
         {mobile.bottomNav.items.map((navItem: any) => (
           <NavItem key={navItem.id} navItem={navItem} />

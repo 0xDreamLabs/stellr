@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 
-import type { NextPage, GetStaticProps } from 'next';
+import type { NextPage, GetServerSideProps } from 'next';
 import { loadTranslations } from 'ni18n';
 
 import { useTranslation } from 'react-i18next';
@@ -15,17 +15,13 @@ import DarkModeToggle from '../components/Components/DarkModeToggle';
 import ToggleLanguage from '../components/Components/ToggleLanguage';
 import ConnectWalletButton from '../components/Components/ConnectWalletButton/ConnectWalletButton';
 
-// const TestSuspense = React.lazy(() => import('../components/Components/TestSuspense.client'));
-// const TestSuspense = dynamic(() => import('../components/Components/TestSuspense.client'), { suspense: true, ssr: false });
-
 import TestSuspense from '../components/Components/TestSuspense';
 
-const HomePage: NextPage = (props: any) => {
+const HomePage: NextPage = () => {
   const { t } = useTranslation('home');
-  // const isServer = typeof window === 'undefined';
-  console.log('PROPS:', props);
+
   return (
-    <>
+    <Suspense fallback={<p>IDK</p>}>
       <SEO title="Home" description="Stellr Home Page" canonical="https://www.stellr.social/" />
       <Layout>
         <div className="text-black dark:text-white">
@@ -34,15 +30,10 @@ const HomePage: NextPage = (props: any) => {
           </h1>
           <ErrorBoundary fallback={<Error errorMsg="Error Fetching Data" />}>
             <Suspense fallback={<Loading className="w-6 h-6" message="Loading..." />}>
-              <TestSuspense />
-              <TestSuspense />
+              <TestSuspense classes="bg-green-300" />
+              <TestSuspense classes="bg-teal-400" />
 
-              <TestSuspense />
-
-              <div>
-                {' '}
-                <p> SOME OTHER COMPONENTE </p>
-              </div>
+              <TestSuspense classes="bg-pink-500" />
             </Suspense>
           </ErrorBoundary>
 
@@ -57,11 +48,11 @@ const HomePage: NextPage = (props: any) => {
           <DarkModeToggle />
         </div>
       </Layout>
-    </>
+    </Suspense>
 
   );
 };
-export const getStaticProps: GetStaticProps = async (props) => ({
+export const getServerSideProps: GetServerSideProps = async (props) => ({
   props: {
     ...(await loadTranslations(ni18nConfig, props.locale, [
       'home',
