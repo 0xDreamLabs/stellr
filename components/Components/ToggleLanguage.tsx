@@ -3,7 +3,7 @@ import { useLanguageSettings } from '../../hooks';
 
 const ToggleLanguage = ({ toggleText } : { toggleText:string }) => {
   const { setLocalStorageLanguage, langSetting } = useLanguageSettings();
-
+  // this component is temp
   return (
     <div className="my-4">
       <button

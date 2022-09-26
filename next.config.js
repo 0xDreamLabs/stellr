@@ -9,6 +9,8 @@ const nextConfig = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  swcMinify: true,
+
 }
 
 module.exports = nextConfig
