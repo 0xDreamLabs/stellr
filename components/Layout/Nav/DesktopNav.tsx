@@ -1,9 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-// import Logo from '../../UI/icons/logo';
-import DarkModeToggle from '../../Components/DarkModeToggle';
-// import AccountButton from '../../Components/AccountButton';
+import { ConnectWalletButton, DarkModeToggle } from 'components/Components';
 
 const DesktopNav = () => (
   <div className="hidden md:flex md:justify-between md:items-center">
@@ -17,9 +15,11 @@ const DesktopNav = () => (
     </Link>
     <div className="mx-4 my-2 flex items-center">
       <div className="mr-4">
+        <ConnectWalletButton />
+      </div>
+      <div className="mr-4">
         <DarkModeToggle />
       </div>
-      {/* <AccountButton /> */}
     </div>
   </div>
 );

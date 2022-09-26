@@ -21,10 +21,10 @@ import {
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 
+import { useLanguageSettings, useHasMounted } from 'hooks';
+import { Loading } from 'components/UI';
 import { ni18nConfig } from '../ni18n.config';
 import GlobalProvider from '../providers/GlobalProvider';
-import { useLanguageSettings, useHasMounted } from '../hooks';
-import { Loading } from '../components/UI';
 
 const { chains, provider } = configureChains(
   [chain.polygon],
