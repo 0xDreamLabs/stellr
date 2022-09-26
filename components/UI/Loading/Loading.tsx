@@ -35,7 +35,7 @@ function getLoaderColor(color: string | undefined) {
       return 'loader-orange';
     case 'black':
     default:
-      return 'loader-black';
+      return 'border-t-black';
   }
 }
 
@@ -54,6 +54,7 @@ export const Loading = ({
       <div
         className={`${c} ${b} animate-spin rounded-full ${className || ''}`}
       />
+      <img src="/images/loader.gif" alt="Loading..." className="w-12 h-12" />
       {message && <div className={`${messageClassName || ''}`}>{message}</div>}
       {children}
     </div>

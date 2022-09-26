@@ -1,9 +1,8 @@
 import React from 'react';
-import type { NextPage, GetStaticProps } from 'next';
-import { useTranslation } from 'react-i18next';
-import { loadTranslations } from 'ni18n';
+import type { NextPage } from 'next';
 
-import { ni18nConfig } from '../ni18n.config';
+import { useTranslation } from 'react-i18next';
+
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/Components/SEO';
 import DarkModeToggle from '../components/Components/DarkModeToggle';
@@ -33,12 +32,4 @@ const ExplorePage: NextPage = () => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async (props) => ({
-  props: {
-    ...(await loadTranslations(ni18nConfig, props.locale, [
-      'explore',
-      'translation',
-    ])),
-  },
-});
 export default ExplorePage;

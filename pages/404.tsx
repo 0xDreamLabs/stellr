@@ -1,11 +1,10 @@
 /* eslint-disable max-len */
 import React from 'react';
-import type { NextPage, GetStaticProps } from 'next';
+import type { NextPage } from 'next';
+
 import { useTranslation } from 'react-i18next';
-import { loadTranslations } from 'ni18n';
 import Link from 'next/link';
 
-import { ni18nConfig } from '../ni18n.config';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/Components/SEO';
 
@@ -293,12 +292,4 @@ const NotFoundPage : NextPage = () => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async (props) => ({
-  props: {
-    ...(await loadTranslations(ni18nConfig, props.locale, [
-      '404',
-      'translation',
-    ])),
-  },
-});
 export default NotFoundPage;

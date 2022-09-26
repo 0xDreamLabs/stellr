@@ -4,6 +4,7 @@ export * from './Collapsible';
 export * from './Container';
 export * from './Divider';
 export * from './Dropdown';
+export * from './Error';
 export * from './Icon';
 export * from './Image';
 export * from './Loading';
