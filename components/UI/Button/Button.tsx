@@ -1,6 +1,5 @@
 import React from 'react';
-import { Icon } from '../Icon';
-import { Loading } from '../Loading';
+import { Icon, Loading } from 'components/UI';
 import { ButtonProps } from './ButtonProps';
 
 export const Button = ({

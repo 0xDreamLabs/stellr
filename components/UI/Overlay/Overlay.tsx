@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState, useEffect, useRef } from 'react';
 import FocusLock from 'react-focus-lock';
-import Icon from '../Icon/Icon';
+import { Icon } from 'components/UI';
 import { OverlayProps } from './OverlayProps';
 
 export const Overlay = ({

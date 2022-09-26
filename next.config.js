@@ -2,9 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental:{
-    serverComponents: true,
-  },
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import StellrLink from '../../Components/StellrLink/StellrLink';
-import { useScrollDirection } from '../../../hooks';
-import { Button, Overlay, Icon } from '../../UI';
-// import Logo from '../../UI/icons/logo';
+import { useScrollDirection } from 'hooks';
+import { StellrLink } from 'components/Components';
+import { Button, Overlay, Icon } from 'components/UI';
 
 import nav from './nav.enum';
 
