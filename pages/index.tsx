@@ -6,16 +6,16 @@ import { loadTranslations } from 'ni18n';
 
 import { useTranslation } from 'react-i18next';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { Error, Loading } from 'components/UI';
+import {
+  SEO,
+  ToggleLanguage,
+  ConnectWalletButton,
+  TestSuspense,
+} from 'components/Components';
+import { Layout } from 'components/Layout';
+
 import { ni18nConfig } from '../ni18n.config';
-
-import Layout from '../components/Layout/Layout';
-import { Error, Loading } from '../components/UI';
-import SEO from '../components/Components/SEO';
-import DarkModeToggle from '../components/Components/DarkModeToggle';
-import ToggleLanguage from '../components/Components/ToggleLanguage';
-import ConnectWalletButton from '../components/Components/ConnectWalletButton/ConnectWalletButton';
-
-import TestSuspense from '../components/Components/TestSuspense';
 
 const HomePage: NextPage = () => {
   const { t } = useTranslation('home');
@@ -45,7 +45,6 @@ const HomePage: NextPage = () => {
           <div>
             <p>{t('Some Text')}</p>
           </div>
-          <DarkModeToggle />
         </div>
       </Layout>
     </>

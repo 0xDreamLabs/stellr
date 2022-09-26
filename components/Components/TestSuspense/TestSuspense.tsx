@@ -1,7 +1,7 @@
 import React from 'react';
 import useSWR from 'swr';
 
-import Agents from '../../agents/agents';
+import Agents from '../../../agents/agents';
 
 const TestSuspense = ({ classes }: { classes: string }) => {
   const { params, fetcher, fetchOptions } = Agents.testRequest.getTestData({ suspense: true });

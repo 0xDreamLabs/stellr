@@ -1,12 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
 import type { NextPage } from 'next';
-
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 
-import Layout from '../components/Layout/Layout';
-import SEO from '../components/Components/SEO';
+import { SEO } from 'components/Components';
+import { Layout } from 'components/Layout';
 
 const NotFoundPage : NextPage = () => {
   const { t } = useTranslation('404');

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLanguageSettings } from '../../hooks';
+import { useLanguageSettings } from '../../../hooks';
 
 const ToggleLanguage = ({ toggleText } : { toggleText:string }) => {
   const { setLocalStorageLanguage, langSetting } = useLanguageSettings();

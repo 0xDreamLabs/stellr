@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useDarkMode } from '../../hooks';
+import { useDarkMode } from '../../../hooks';
 
-import { Button } from '../UI';
+import { Button } from '../../UI';
 
 const DarkModeToggle = () => {
   const [isDark, setIsDark] = useDarkMode();
