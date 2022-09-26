@@ -16,3 +16,5 @@ artifacts
 /public/sitemap.xml
 /public/sitemap-0.xml
 /public/robots.txt
+
+.tsbuildinfo
