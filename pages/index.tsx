@@ -21,7 +21,7 @@ const HomePage: NextPage = () => {
   const { t } = useTranslation('home');
 
   return (
-    <Suspense fallback={<p>IDK</p>}>
+    <>
       <SEO title="Home" description="Stellr Home Page" canonical="https://www.stellr.social/" />
       <Layout>
         <div className="text-black dark:text-white">
@@ -48,7 +48,7 @@ const HomePage: NextPage = () => {
           <DarkModeToggle />
         </div>
       </Layout>
-    </Suspense>
+    </>
 
   );
 };

@@ -23,7 +23,7 @@
     "incremental": true,
 
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/index.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": [
     "hardhat.config.ts",
     "node_modules"
