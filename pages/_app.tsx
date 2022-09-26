@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { appWithI18Next, useSyncLanguage } from 'ni18n';
-import '../styles/globals.css';
+import 'styles/globals.css';
 import type { AppProps } from 'next/app';
 import Router from 'next/router';
 
@@ -23,8 +23,8 @@ import { publicProvider } from 'wagmi/providers/public';
 
 import { useLanguageSettings, useHasMounted } from 'hooks';
 import { Loading } from 'components/UI';
+import GlobalProvider from 'providers/GlobalProvider';
 import { ni18nConfig } from '../ni18n.config';
-import GlobalProvider from '../providers/GlobalProvider';
 
 const { chains, provider } = configureChains(
   [chain.polygon],

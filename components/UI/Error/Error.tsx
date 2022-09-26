@@ -1,6 +1,5 @@
 import React from 'react';
-import Icon from '../Icon';
-import Card from '../Card';
+import { Icon, Card } from 'components/UI';
 
 export const Error = ({ errorMsg }: { errorMsg: string }) => (
   <Card classes="bg-red-200 border-red-500 items-center justify-center">

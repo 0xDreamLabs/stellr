@@ -2,8 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useEffect, ReactNode } from 'react';
-import { Button } from '../Button';
-import { Icon } from '../Icon';
+import { Button, Icon } from 'components/UI';
 import { ButtonProps } from '../Button/ButtonProps';
 import { IconProps } from '../Icon/IconProps';
 import { DropdownProps } from './DropdownProps';
